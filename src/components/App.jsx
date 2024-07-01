@@ -24,6 +24,9 @@ const theme = {
       secondaryTextColor: "#777",
       mainBgColor: "#fff",
       secondaryBgColor: "#f9f9f9",
+      accentColor: "#a2d2ff",
+      heroOverlayColor: "#bde0fe80",
+      heroSecondOverlayColor: "#219ebc80",
     },
   },
   dark: {
@@ -32,6 +35,9 @@ const theme = {
       secondaryTextColor: "#ccc",
       mainBgColor: "#333",
       secondaryBgColor: "#444",
+      accentColor: "#a2d2ff",
+      heroOverlayColor: "#bde0fe80",
+      heroSecondOverlayColor: "#219ebc80",
     },
   },
 };
