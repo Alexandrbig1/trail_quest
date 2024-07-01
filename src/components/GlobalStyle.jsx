@@ -7,25 +7,28 @@ export const GlobalStyle = createGlobalStyle`
   --primary-transition: 0.3s ease-in-out;
 }
 
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ${primaryFont};
+  }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 
-body {
-  font-family: ${primaryFont};
-  margin: 0 auto;
-  scroll-behavior: smooth;
-  min-height: 100%;
-  overflow-x: hidden;
-}
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 p {
   margin: 0;
@@ -50,6 +53,12 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  transition: color var(--primary-transition);
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
 }
 
 button {
@@ -59,6 +68,12 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: background var(--primary-transition), color var(--primary-transition);
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
 }
 
 input, textarea {

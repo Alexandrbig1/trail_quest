@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
@@ -47,12 +48,14 @@ function App() {
     )
   );
   return (
-    <ThemeProvider theme={isDarkTheme ? theme.dark : theme.light}>
-      <GlobalStyle />
-      <FontsHelmet />
-      <ToastContainer />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={isDarkTheme ? theme.dark : theme.light}>
+        <GlobalStyle />
+        <FontsHelmet />
+        <ToastContainer />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

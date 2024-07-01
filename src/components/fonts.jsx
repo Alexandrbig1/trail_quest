@@ -1,2 +1,2 @@
-export const primaryFont = "Manrope, sans-serif";
-export const secondaryFont = "DM Sans, sans-serif";
+export const primaryFont = "'Lato', Arial, sans-serif";
+export const secondaryFont = "'DM Sans', Helvetica, sans-serif";
