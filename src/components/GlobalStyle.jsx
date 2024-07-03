@@ -12,23 +12,23 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ${primaryFont};
-  }
+  font-family: ${primaryFont};
+}
 
-  html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-  body {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    min-height: 100%;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 p {
   margin: 0;
