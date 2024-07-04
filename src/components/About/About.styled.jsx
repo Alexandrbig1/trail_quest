@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { secondaryFont } from "../fonts";
 import { LuMousePointerClick } from "react-icons/lu";
 
-import { HiOutlineArrowCircleRight } from "react-icons/hi";
-
 export const AboutContainer = styled.section`
   width: 100%;
   height: 100%;
@@ -89,4 +87,31 @@ export const AboutHighlightBtn = styled.button`
       transform: scale(1.15);
     }
   }
+`;
+
+export const AboutImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const AboutImageFirst = styled.img`
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  width: 55%;
+`;
+
+export const AboutImageSecond = styled.img`
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  width: 55%;
+`;
+
+export const AboutImageThird = styled.img`
+  position: absolute;
+  top: 10rem;
+  left: 20%;
+  width: 55%;
 `;
