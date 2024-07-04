@@ -20,12 +20,15 @@ const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 const theme = {
   light: {
     colors: {
-      mainTextColor: "#333",
+      mainTextColor: "#0c0a09",
+      // paragraphTextColor: "#0c0a0990",
+      paragraphTextColor: "#1c1917",
       secondaryTextColor: "#777",
       mainBgColor: "#e2e8f0",
       aboutBgColor: "#94a3b8",
       secondaryBgColor: "#f9f9f9",
       accentColor: "#a2d2ff",
+      accentDarkColor: "#3b82f6",
       heroOverlayColor: "#bde0fe80",
       heroSecondOverlayColor: "#219ebc80",
       headingTextColor: "#38bdf8",
@@ -34,12 +37,14 @@ const theme = {
   },
   dark: {
     colors: {
-      mainTextColor: "#fff",
+      mainTextColor: "#fafaf9",
+      paragraphTextColor: "#fafaf990",
       secondaryTextColor: "#ccc",
       mainBgColor: "#164e63",
       aboutBgColor: "#0369a1",
       secondaryBgColor: "#444",
       accentColor: "#a2d2ff",
+      accentDarkColor: "#3b82f6",
       heroOverlayColor: "#bde0fe80",
       heroSecondOverlayColor: "#219ebc80",
       headingTextColor: "#3b82f6",

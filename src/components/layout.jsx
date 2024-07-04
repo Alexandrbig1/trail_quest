@@ -10,6 +10,7 @@ export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   padding: 0 1.2rem;
+  border: 1px solid red;
 
   @media (min-width: 768px) {
     max-width: 768px;
@@ -23,7 +24,7 @@ export const Container = styled.div`
 
   @media (min-width: 1440px) {
     max-width: 1440px;
-    padding: 0 2.4rem;
+    padding: 9.6rem 2.4rem;
   }
 `;
 
