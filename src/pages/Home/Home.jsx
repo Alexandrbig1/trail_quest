@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "../../components/Hero/Hero";
+import About from "../../components/About/About";
+import { Container, Main } from "../../components/layout";
 
 function Home() {
   return (
@@ -29,9 +31,12 @@ function Home() {
         <meta name="twitter:creator" content="@alexsmagin29" />
         <meta name="twitter:site" content="@alexsmagin29" />
       </Helmet>
-      <div>
+      <main>
         <Hero />
-      </div>
+        <Container>
+          <About />
+        </Container>
+      </main>
     </>
   );
 }

@@ -8,10 +8,10 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: ${primaryFont};
 }
 
@@ -22,6 +22,8 @@ html {
 }
 
 body {
+  background-color: ${({ theme }) => theme.colors.mainBgColor};
+  scroll-behavior: smooth;
   font-size: 1.6rem;
   line-height: 1.5;
   min-height: 100%;

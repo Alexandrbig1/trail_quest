@@ -22,7 +22,7 @@ export const HeroWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.8rem;
+  gap: 2.4rem;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
@@ -34,35 +34,72 @@ export const HeroWrapper = styled.section`
       ),
       url(${heroImgDesktop});
   }
+
+  @media (min-width: 1440px) {
+    gap: 4.8rem;
+  }
+`;
+
+export const HeroContainer = styled.div`
+  width: 100%;
+  max-width: 375px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8.6rem;
+    max-width: 1440px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 2.4rem;
+  }
 `;
 
 export const HeroTItleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 2.4rem;
 `;
 
 export const HeroTitle = styled.h1`
   backface-visibility: hidden;
   font-family: ${primaryFont};
   font-weight: 700;
-  font-size: 8.2rem;
+  font-size: 3.2rem;
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media (min-width: 1440px) {
+    font-size: 8.2rem;
+  }
 `;
 
 export const HeroSubTitle = styled.p`
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  line-height: 1.334;
   letter-spacing: -0.02em;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
   max-width: 72rem;
+
+  @media (min-width: 1440px) {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
 `;
 
 export const HeroButton = styled.button`

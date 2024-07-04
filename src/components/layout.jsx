@@ -9,36 +9,28 @@ export const Container = styled.div`
   max-width: 375px;
   position: relative;
   margin: 0 auto;
+  padding: 0 1.2rem;
 
   @media (min-width: 768px) {
     max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8.6rem;
+    max-width: 1440px;
   }
 
   @media (min-width: 1440px) {
     max-width: 1440px;
+    padding: 0 2.4rem;
   }
 `;
 
-export const Main = styled.main`
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  height: 100%;
+export const Main = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.colors.mainTextColor};
-  transition: background-image 0.3s ease-in-out;
-  position: relative;
-
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
-    (min-width: 1024px) and (min-resolution: 192dpi) {
-  }
+  gap: 8.6rem;
 `;
