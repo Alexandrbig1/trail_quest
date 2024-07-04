@@ -95,23 +95,33 @@ export const AboutImageWrapper = styled.div`
   height: 100%;
 `;
 
-export const AboutImageFirst = styled.img`
+export const AboutImage = styled.img`
   position: absolute;
+  width: 55%;
+  z-index: 10;
+  transition: all var(--primary-transition);
+  border: 1.2rem solid #fff;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+export const AboutImageFirst = styled(AboutImage)`
   top: -2rem;
   left: 0;
-  width: 55%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
-export const AboutImageSecond = styled.img`
-  position: absolute;
+export const AboutImageSecond = styled(AboutImage)`
   top: 2rem;
   right: 0;
-  width: 55%;
 `;
 
-export const AboutImageThird = styled.img`
-  position: absolute;
+export const AboutImageThird = styled(AboutImage)`
   top: 10rem;
   left: 20%;
-  width: 55%;
 `;
