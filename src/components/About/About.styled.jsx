@@ -100,28 +100,29 @@ export const AboutImage = styled.img`
   width: 55%;
   z-index: 10;
   transition: all var(--primary-transition);
-  border: 1.2rem solid #fff;
+  /* border: 1.2rem solid #fff; */
 
   &:hover {
     transform: scale(1.05);
+    z-index: 20;
   }
 `;
 
 export const AboutImageFirst = styled(AboutImage)`
   top: -2rem;
   left: 0;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  left: -4rem;
 `;
 
 export const AboutImageSecond = styled(AboutImage)`
-  top: 2rem;
+  /* top: 2rem; */
+  top: 4rem;
   right: 0;
+  right: -4rem;
 `;
 
 export const AboutImageThird = styled(AboutImage)`
-  top: 10rem;
+  /* top: 10rem; */
+  bottom: 0;
   left: 20%;
 `;
