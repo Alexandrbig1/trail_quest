@@ -1,3 +1,4 @@
+import React, { createRef } from "react";
 import {
   HeroButton,
   HeroContainer,
@@ -6,10 +7,13 @@ import {
   HeroTitle,
   HeroWrapper,
 } from "./Hero.styled";
+import { useInView } from "react-intersection-observer";
 
 function Hero() {
+  const { homeRef } = useInView({ threshold: 0.5 });
+
   return (
-    <HeroWrapper>
+    <HeroWrapper id="home" ref={homeRef}>
       <HeroContainer>
         <HeroTItleWrapper>
           <HeroTitle>

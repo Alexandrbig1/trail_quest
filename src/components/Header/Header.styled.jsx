@@ -15,4 +15,22 @@ export const HeaderWrapper = styled.header`
   max-width: 1440px;
 `;
 
-export const LogoWrap = styled.div``;
+export const HeaderNavMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+`;
+
+export const HeaderNavLink = styled.a`
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: ${(p) =>
+    p?.$active ? p.theme.colors.accentColor : p.theme.colors.textColor};
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentColor};
+  }
+`;

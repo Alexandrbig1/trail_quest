@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import HeadingSection from "../UI/Heading/Heading";
 import {
   AboutContainer,
@@ -16,8 +17,10 @@ import {
 } from "./About.styled";
 
 function About() {
+  const { aboutRef } = useInView({ threshold: 0.5 });
+
   return (
-    <AboutContainer>
+    <AboutContainer id="about" ref={aboutRef}>
       <HeadingSection>Unforgettable Oregon Adventures Await</HeadingSection>
       <AboutWrapper>
         <AboutHighlightWrapper>
