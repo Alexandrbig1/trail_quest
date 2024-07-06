@@ -21,6 +21,7 @@ const theme = {
   light: {
     colors: {
       mainTextColor: "#0c0a09",
+      mainTextColorLowOp: "#0c0a0970",
       // paragraphTextColor: "#0c0a0990",
       paragraphTextColor: "#1c1917",
       secondaryTextColor: "#777",
@@ -38,6 +39,7 @@ const theme = {
   dark: {
     colors: {
       mainTextColor: "#fafaf9",
+      mainTextColorLowOp: "#fafaf970",
       paragraphTextColor: "#fafaf990",
       secondaryTextColor: "#ccc",
       mainBgColor: "#164e63",

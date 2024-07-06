@@ -1,4 +1,6 @@
-import React, { createRef } from "react";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "../../context/activeSection";
 import {
   HeroButton,
   HeroContainer,
@@ -7,10 +9,16 @@ import {
   HeroTitle,
   HeroWrapper,
 } from "./Hero.styled";
-import { useInView } from "react-intersection-observer";
 
 function Hero() {
-  const { homeRef } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSection();
+  const { ref: homeRef, inView: homeInView } = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    if (homeInView) {
+      setActiveSection("Home");
+    }
+  }, [homeInView, setActiveSection]);
 
   return (
     <HeroWrapper id="home" ref={homeRef}>

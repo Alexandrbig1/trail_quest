@@ -61,9 +61,9 @@ function Header() {
                 onClick={(e) => {
                   e.preventDefault();
                   handleLinkClick(to);
-                  setActiveSection(to);
+                  setActiveSection(list);
                 }}
-                $active={activeSection === to}
+                $active={activeSection === list}
               >
                 {list}
               </HeaderNavLink>

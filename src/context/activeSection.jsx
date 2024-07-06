@@ -4,7 +4,7 @@ const ActiveContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const ActiveSectionContext = ({ children }) => {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("Home");
 
   return (
     <ActiveContext.Provider

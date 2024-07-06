@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { primaryFont } from "../fonts";
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -22,15 +23,19 @@ export const HeaderNavMenu = styled.ul`
 `;
 
 export const HeaderNavLink = styled.a`
+  font-family: ${primaryFont};
   font-size: 1.6rem;
   font-weight: 700;
+  line-height: 1.5;
   color: ${(p) =>
-    p?.$active ? p.theme.colors.accentColor : p.theme.colors.textColor};
+    p?.$active
+      ? p.theme.colors.mainTextColor
+      : p.theme.colors.mainTextColorLowOp};
   text-transform: uppercase;
   text-decoration: none;
   transition: color var(--primary-transition);
 
   &:hover {
-    color: ${(p) => p.theme.colors.accentColor};
+    color: ${(p) => p.theme.colors.mainTextColor};
   }
 `;

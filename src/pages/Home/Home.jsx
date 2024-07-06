@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
-import { Container, Main } from "../../components/layout";
+import { Container } from "../../components/layout";
+import Features from "../../components/Features/Features";
+import Contact from "../../components/Contact/Contact";
 
 function Home() {
   return (
@@ -35,6 +37,8 @@ function Home() {
         <Hero />
         <Container>
           <About />
+          <Features />
+          <Contact />
         </Container>
       </main>
     </>

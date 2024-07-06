@@ -1,5 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import HeadingSection from "../UI/Heading/Heading";
+import { useActiveSection } from "../../context/activeSection";
+import { useEffect } from "react";
 import {
   AboutContainer,
   AboutHighlightBtn,
@@ -17,7 +19,17 @@ import {
 } from "./About.styled";
 
 function About() {
-  const { aboutRef } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSection();
+
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (aboutInView) {
+      setActiveSection("About");
+    }
+  }, [aboutInView, setActiveSection]);
 
   return (
     <AboutContainer id="about" ref={aboutRef}>
