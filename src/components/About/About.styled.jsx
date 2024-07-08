@@ -96,12 +96,10 @@ export const AboutImageWrapper = styled.div`
 `;
 
 export const AboutImage = styled.img`
-  /* position: absolute; */
   width: 55%;
   width: 100%;
   z-index: 10;
   transition: all var(--primary-transition);
-  /* border: 1.2rem solid #fff; */
 
   &:hover {
     transform: scale(1.05);
@@ -109,23 +107,7 @@ export const AboutImage = styled.img`
   }
 `;
 
-export const AboutImageFirst = styled(AboutImage)`
-  /* top: -2rem;
-  left: -4rem; */
-`;
-
-export const AboutImageSecond = styled(AboutImage)`
-  /* top: 4rem;
-  right: -4rem; */
-`;
-
-export const AboutImageThird = styled(AboutImage)`
-  /* bottom: 0;
-  left: 20%; */
-`;
-
 export const ImgFigureFirst = styled.figure`
-  /* position: relative; */
   width: 55%;
   position: absolute;
   top: -2rem;
@@ -133,7 +115,6 @@ export const ImgFigureFirst = styled.figure`
 `;
 
 export const ImgFigureSecond = styled.figure`
-  /* position: relative; */
   width: 55%;
   position: absolute;
   top: 4rem;
@@ -141,15 +122,56 @@ export const ImgFigureSecond = styled.figure`
 `;
 
 export const ImgFigureThird = styled.figure`
-  /* position: relative; */
   width: 55%;
   position: absolute;
   bottom: 0;
   left: 20%;
 `;
 
-export const ImgDescription = styled.figcaption`
+export const ImgDescriptionFirst = styled.figcaption`
   position: absolute;
-  bottom: -2.4rem;
+  bottom: -2.8rem;
   left: 0;
+
+  font-family: ${secondaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.paragraphTextColor};
+`;
+
+export const ImgDescriptionSecond = styled.figcaption`
+  position: absolute;
+  top: -2.8rem;
+  right: 0;
+
+  font-family: ${secondaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.paragraphTextColor};
+`;
+
+export const ImgDescriptionSecondAdd = styled.span`
+  font-family: ${secondaryFont};
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.paragraphTextColor};
+`;
+
+export const ImgDescriptionThird = styled.figcaption`
+  position: absolute;
+  bottom: -2.8rem;
+  right: 0;
+
+  font-family: ${secondaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.paragraphTextColor};
 `;
