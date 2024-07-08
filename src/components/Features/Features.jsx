@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
 import { useEffect } from "react";
+import { FeaturesContainer } from "./Features.styled";
 
 function Features() {
   const { setActiveSection } = useActiveSection();
@@ -16,7 +17,7 @@ function Features() {
   }, [featuresInView, setActiveSection]);
 
   return (
-    <div id="features" ref={featuresRef}>
+    <FeaturesContainer id="features" ref={featuresRef}>
       <h2>Lorem ipsum dolor sit amet.</h2>
       <p>Features</p>
       <p>
@@ -43,7 +44,7 @@ function Features() {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
         commodi.
       </p>
-    </div>
+    </FeaturesContainer>
   );
 }
 

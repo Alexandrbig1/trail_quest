@@ -14,7 +14,8 @@ function Header() {
   const navigate = useNavigate();
   const { activeSection, setActiveSection } = useActiveSection();
 
-  const handleLinkClick = (to) => {
+  const handleLinkClick = (e, to, list) => {
+    e.preventDefault();
     const sectionId = to.replace("/", "");
     const sectionElement = document.getElementById(sectionId);
 
@@ -23,6 +24,8 @@ function Header() {
     } else {
       navigate(to);
     }
+
+    setActiveSection(list);
   };
 
   return (
@@ -34,11 +37,7 @@ function Header() {
             <li key={to}>
               <HeaderNavLink
                 href={to}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleLinkClick(to);
-                  setActiveSection(list);
-                }}
+                onClick={(e) => handleLinkClick(e, to, list)}
                 $active={activeSection === list}
               >
                 {list}
