@@ -96,8 +96,9 @@ export const AboutImageWrapper = styled.div`
 `;
 
 export const AboutImage = styled.img`
-  position: absolute;
+  /* position: absolute; */
   width: 55%;
+  width: 100%;
   z-index: 10;
   transition: all var(--primary-transition);
   /* border: 1.2rem solid #fff; */
@@ -109,20 +110,46 @@ export const AboutImage = styled.img`
 `;
 
 export const AboutImageFirst = styled(AboutImage)`
-  top: -2rem;
-  left: 0;
-  left: -4rem;
+  /* top: -2rem;
+  left: -4rem; */
 `;
 
 export const AboutImageSecond = styled(AboutImage)`
-  /* top: 2rem; */
-  top: 4rem;
-  right: 0;
-  right: -4rem;
+  /* top: 4rem;
+  right: -4rem; */
 `;
 
 export const AboutImageThird = styled(AboutImage)`
-  /* top: 10rem; */
+  /* bottom: 0;
+  left: 20%; */
+`;
+
+export const ImgFigureFirst = styled.figure`
+  /* position: relative; */
+  width: 55%;
+  position: absolute;
+  top: -2rem;
+  left: -4rem;
+`;
+
+export const ImgFigureSecond = styled.figure`
+  /* position: relative; */
+  width: 55%;
+  position: absolute;
+  top: 4rem;
+  right: -4rem;
+`;
+
+export const ImgFigureThird = styled.figure`
+  /* position: relative; */
+  width: 55%;
+  position: absolute;
   bottom: 0;
   left: 20%;
+`;
+
+export const ImgDescription = styled.figcaption`
+  position: absolute;
+  bottom: -2.4rem;
+  left: 0;
 `;

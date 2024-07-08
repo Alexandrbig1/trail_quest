@@ -1,8 +1,5 @@
 import Logo from "../UI/Logo/Logo";
-import { v4 as uuid } from "uuid";
-import { useInView } from "react-intersection-observer";
 import { HeaderNavLink, HeaderNavMenu, HeaderWrapper } from "./Header.styled";
-import { useEffect, useState } from "react";
 import { useActiveSection } from "../../context/activeSection";
 import { useNavigate } from "react-router-dom";
 
@@ -16,27 +13,6 @@ const menuLists = [
 function Header() {
   const navigate = useNavigate();
   const { activeSection, setActiveSection } = useActiveSection();
-
-  // const options = {
-  //   threshold: 0.5,
-  // };
-
-  // const { ref: homeRef, inView: homeInView } = useInView(options);
-  // const { ref: aboutRef, inView: aboutInView } = useInView(options);
-  // const { ref: featuresRef, inView: featuresInView } = useInView(options);
-  // const { ref: contactRef, inView: contactInView } = useInView(options);
-
-  // useEffect(() => {
-  //   if (homeInView) {
-  //     setActiveSection("home");
-  //   } else if (aboutInView) {
-  //     setActiveSection("about");
-  //   } else if (featuresInView) {
-  //     setActiveSection("features");
-  //   } else if (contactInView) {
-  //     setActiveSection("contact");
-  //   }
-  // }, [homeInView, aboutInView, featuresInView, contactInView]);
 
   const handleLinkClick = (to) => {
     const sectionId = to.replace("/", "");
@@ -55,7 +31,7 @@ function Header() {
       <nav>
         <HeaderNavMenu>
           {menuLists.map(({ to, list }) => (
-            <li key={uuid()}>
+            <li key={to}>
               <HeaderNavLink
                 href={to}
                 onClick={(e) => {

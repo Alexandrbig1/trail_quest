@@ -6,13 +6,13 @@ import FontsHelmet from "./FontsHelmet";
 import RootLayout from "../layouts/RootLayout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HelmetProvider } from "react-helmet-async";
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
