@@ -16,7 +16,7 @@ export const HeroWrapper = styled.section`
     url(${heroImg});
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 
   display: flex;
   flex-direction: column;

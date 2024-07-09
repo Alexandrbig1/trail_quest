@@ -37,9 +37,9 @@ function Home() {
         <Hero />
         <Container>
           <About />
-          <Features />
-          <Contact />
         </Container>
+        <Features />
+        <Contact />
       </main>
     </>
   );

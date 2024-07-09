@@ -31,25 +31,6 @@ export const AboutTitleWrapper = styled.div`
   gap: 2.4rem;
 `;
 
-export const AboutHighlightTitle = styled.div`
-  text-transform: uppercase;
-  font-family: ${secondaryFont};
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const AboutHighlightDescription = styled.div`
-  font-family: ${secondaryFont};
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: ${(p) => p.theme.colors.paragraphTextColor};
-`;
-
 export const AboutHighlightBtnText = styled.span`
   color: ${(p) => p.theme.colors.accentDarkColor};
   font-family: ${secondaryFont};
@@ -100,6 +81,7 @@ export const AboutImage = styled.img`
   width: 55%;
   width: 100%;
   z-index: 10;
+  border-radius: 0.4rem;
   transition: all var(--primary-transition);
 
   &:hover {

@@ -1,7 +1,17 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
 import { useEffect } from "react";
-import { FeaturesContainer } from "./Features.styled";
+import {
+  FeaturesContainer,
+  FeaturesIcon,
+  FeaturesIconWrapper,
+  FeaturesMenu,
+  FeaturesMenuItems,
+} from "./Features.styled";
+import HeadingText from "../UI/Heading/HeadingText";
+import SectionParagraph from "../UI/SectionParagraph/SectionParagraph";
+import FeaturesData from "../../data/featuresData.json";
+import { Container } from "../layout";
 
 function Features() {
   const { setActiveSection } = useActiveSection();
@@ -18,32 +28,19 @@ function Features() {
 
   return (
     <FeaturesContainer id="features" ref={featuresRef}>
-      <h2>Lorem ipsum dolor sit amet.</h2>
-      <p>Features</p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        commodi.
-      </p>
+      <Container>
+        <FeaturesMenu>
+          {FeaturesData.map(({ id, title, description }) => (
+            <FeaturesMenuItems key={id}>
+              <FeaturesIconWrapper>
+                <FeaturesIcon />
+              </FeaturesIconWrapper>
+              <HeadingText>{title}</HeadingText>
+              <SectionParagraph>{description}</SectionParagraph>
+            </FeaturesMenuItems>
+          ))}
+        </FeaturesMenu>
+      </Container>
     </FeaturesContainer>
   );
 }

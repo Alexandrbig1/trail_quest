@@ -1,8 +1,12 @@
+import PropTypes from "prop-types";
 import { HeadingSectionTitle } from "./Heading.styled";
 
-// eslint-disable-next-line react/prop-types
 function HeadingSection({ children }) {
   return <HeadingSectionTitle>{children}</HeadingSectionTitle>;
 }
+
+HeadingSection.propTypes = {
+  children: PropTypes.string.isRequired,
+};
 
 export default HeadingSection;

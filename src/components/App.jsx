@@ -34,6 +34,8 @@ const theme = {
       heroSecondOverlayColor: "#219ebc80",
       headingTextColor: "#38bdf8",
       headingSecondaryTextColor: "#0077b6",
+      whiteColor: "#fafaf9",
+      whiteColorLowOp: "#fafaf980",
     },
   },
   dark: {
@@ -51,6 +53,8 @@ const theme = {
       heroSecondOverlayColor: "#219ebc80",
       headingTextColor: "#3b82f6",
       headingSecondaryTextColor: "#0077b6",
+      whiteColor: "#fafaf9",
+      whiteColorLowOp: "#fafaf980",
     },
   },
 };

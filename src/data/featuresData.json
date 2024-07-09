@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Scenic Trails",
+    "description": "Explore Oregon's diverse landscapes with our expert guides, uncovering hidden trails and breathtaking views.",
+    "icon": "mountain",
+    "id": "feat001"
+  },
+  {
+    "title": "Expert Guides",
+    "description": "Join knowledgeable guides who enhance your journey with insights into local flora, fauna, and history.",
+    "icon": "compass",
+    "id": "feat002"
+  },
+  {
+    "title": "Nature Connection",
+    "description": "Immerse yourself in Oregon's natural beauty, forging a deeper connection with the environment.",
+    "icon": "way",
+    "id": "feat003"
+  },
+  {
+    "title": "Customizable Adventures",
+    "description": "Tailor your hiking experience with options for different difficulty levels and personalized itineraries.",
+    "icon": "health",
+    "id": "feat004"
+  }
+]

@@ -17,3 +17,13 @@ export const HeadingSectionTitle = styled.h2`
   -webkit-background-clip: text;
   color: transparent;
 `;
+
+export const AboutHighlightTitle = styled.h3`
+  text-transform: uppercase;
+  font-family: ${primaryFont};
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
