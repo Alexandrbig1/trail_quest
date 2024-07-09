@@ -4,6 +4,7 @@ import About from "../../components/About/About";
 import { Container } from "../../components/layout";
 import Features from "../../components/Features/Features";
 import Contact from "../../components/Contact/Contact";
+import Tours from "../../components/Tours/Tours";
 
 function Home() {
   return (
@@ -39,6 +40,9 @@ function Home() {
           <About />
         </Container>
         <Features />
+        <Container>
+          <Tours />
+        </Container>
         <Contact />
       </main>
     </>

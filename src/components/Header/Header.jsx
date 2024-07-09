@@ -7,6 +7,7 @@ const menuLists = [
   { to: "/home", list: "Home" },
   { to: "/about", list: "About" },
   { to: "/features", list: "Features" },
+  { to: "/tours", list: "Tours" },
   { to: "/contact", list: "Contact" },
 ];
 

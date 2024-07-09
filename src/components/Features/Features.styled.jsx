@@ -57,12 +57,12 @@ export const FeaturesMenuItems = styled.li`
 
 export const FeaturesIconWrapper = styled.div`
   border-radius: 50rem;
-  background-color: #00000050;
+  background-color: ${(p) => p.theme.colors.mainBgColor};
   padding: 1rem;
   margin-bottom: 1.2rem;
 `;
 
 export const FeaturesIcon = styled(MdOutlineModeOfTravel)`
   font-size: 3.6rem;
-  color: ${(p) => p.theme.colors.mainTextColor};
+  color: ${(p) => p.theme.colors.accentDarkColor};
 `;
