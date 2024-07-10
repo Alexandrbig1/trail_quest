@@ -12,14 +12,18 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import HeadingSection from "../UI/Heading/Heading";
 import {
+  QuoteIcon,
   SlideNameReview,
   SlideReview,
+  SlideReviewImg,
+  SlideTextWrapper,
   SlideWrapper,
   SwiperContainer,
   TestimonialsContainer,
 } from "./Testimonials.styled";
 import reviews from "../../data/reviews.json";
 import StarRating from "../UI/StarRating/StarRating";
+import { IoIosQuote } from "react-icons/io";
 
 function Testimonials() {
   return (
@@ -47,12 +51,18 @@ function Testimonials() {
           modules={[Pagination, Autoplay, Navigation, Mousewheel, Keyboard]}
           // className={cl.swiperWrapper}
         >
-          {reviews.map(({ id, name, stars, review }) => (
+          {reviews.map(({ id, name, stars, review, img }) => (
             <SwiperSlide key={id}>
               <SlideWrapper>
-                <StarRating stars={stars} />
-                <SlideReview>{review}</SlideReview>
-                <SlideNameReview>{name}</SlideNameReview>
+                <SlideReviewImg src={img} alt="" />
+                <SlideTextWrapper>
+                  <StarRating stars={stars} />
+                  <QuoteIcon>
+                    <IoIosQuote />
+                  </QuoteIcon>
+                  <SlideReview>{review}</SlideReview>
+                  <SlideNameReview>{name}</SlideNameReview>
+                </SlideTextWrapper>
               </SlideWrapper>
             </SwiperSlide>
           ))}

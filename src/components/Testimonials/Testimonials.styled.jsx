@@ -25,19 +25,21 @@ export const SwiperContainer = styled.div`
 
 export const SlideWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 2.4rem;
-  width: 50%;
+  width: 65%;
   height: 100%;
   margin: 0 auto;
   padding: 5.4rem;
   border-radius: 1.2rem;
-  background-color: red;
-  transform: skewX(-12deg);
+  background-color: ${({ theme }) => theme.colors.blueColorLowOp};
+`;
 
-  & > * {
-    transform: skewX(12deg);
-  }
+export const SlideTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: relative;
 `;
 
 export const SlideReview = styled.p`
@@ -57,6 +59,21 @@ export const SlideNameReview = styled.h4`
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.mainTextColor};
+`;
+
+export const SlideReviewImg = styled.img`
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50rem;
+`;
+
+export const QuoteIcon = styled.span`
+  font-size: 4.2rem;
+  color: #01be9690;
+
+  position: absolute;
+  top: -2.4rem;
+  right: 0;
 `;
 
 // .paginationContainer {
