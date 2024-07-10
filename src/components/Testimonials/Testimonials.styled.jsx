@@ -5,15 +5,38 @@ export const TestimonialsContainer = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
+export const TestimonialsSwiperContainer = styled.section`
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9.2rem;
-  margin-top: 9.6rem;
+  justify-content: center;
+  gap: 4.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
 `;
 
 export const SwiperContainer = styled.div`
   width: 100%;
-  height: 100%;
   height: 44rem;
 
   padding: 0 9.6rem;
@@ -33,6 +56,7 @@ export const SlideWrapper = styled.div`
   padding: 5.4rem;
   border-radius: 1.2rem;
   background-color: ${({ theme }) => theme.colors.blueColorLowOp};
+  background-color: #2998ff50;
 `;
 
 export const SlideTextWrapper = styled.div`
@@ -48,7 +72,7 @@ export const SlideReview = styled.p`
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: ${({ theme }) => theme.colors.paragraphTextColor};
+  color: ${({ theme }) => theme.colors.whiteColor};
 `;
 
 export const SlideNameReview = styled.h4`
@@ -58,12 +82,12 @@ export const SlideNameReview = styled.h4`
   line-height: 1.16667;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.mainTextColor};
+  color: ${({ theme }) => theme.colors.whiteColor};
 `;
 
 export const SlideReviewImg = styled.img`
-  width: 8rem;
-  height: 8rem;
+  width: 9.6rem;
+  height: 9.6rem;
   border-radius: 50rem;
 `;
 
@@ -95,3 +119,11 @@ export const QuoteIcon = styled.span`
 // .paginationBulletActive {
 //   background-color: #000;
 // }
+
+export const ReviewsVideoBg = styled.video`
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  object-fit: cover;
+`;

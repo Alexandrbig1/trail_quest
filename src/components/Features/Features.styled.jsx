@@ -3,7 +3,7 @@ import featuresImg from "@/assets/features.jpg";
 import featuresImgDesktop from "@/assets/features@2x.jpg";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 
-export const FeaturesContainer = styled.div`
+export const FeaturesContainer = styled.section`
   width: 100%;
   height: 100%;
   padding: 9.6rem 0;
@@ -18,6 +18,7 @@ export const FeaturesContainer = styled.div`
     url(${featuresImg});
   background-size: cover;
   background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),

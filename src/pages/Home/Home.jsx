@@ -43,8 +43,8 @@ function Home() {
         <Features />
         <Container>
           <Tours />
-          <Testimonials />
         </Container>
+        <Testimonials />
         <Contact />
       </main>
     </>
