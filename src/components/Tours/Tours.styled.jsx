@@ -5,6 +5,7 @@ import mountainImg from "@/assets/tours_mountain.jpg";
 import mountainImgDesktop from "@/assets/tours_mountain@2x.jpg";
 import snowImg from "@/assets/tours_snow.jpg";
 import snowImgDesktop from "@/assets/tours_snow@2x.jpg";
+import { primaryFont, secondaryFont } from "../fonts";
 
 export const ToursContainer = styled.section`
   width: 100%;
@@ -24,8 +25,7 @@ export const ToursMenu = styled.ul`
 `;
 
 export const ToursItemWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.whiteColor};
-  height: 50rem;
+  height: 52rem;
   width: 100%;
   position: absolute;
   top: 0;
@@ -42,6 +42,10 @@ export const ToursItemFront = styled(ToursItemWrapper)`
 `;
 
 export const ToursItemBack = styled(ToursItemWrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transform: rotateY(180deg);
   background-image: linear-gradient(
     to right bottom,
@@ -51,6 +55,10 @@ export const ToursItemBack = styled(ToursItemWrapper)`
 `;
 
 export const ToursItemBackSecond = styled(ToursItemWrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transform: rotateY(180deg);
   background-image: linear-gradient(
     to right bottom,
@@ -60,6 +68,10 @@ export const ToursItemBackSecond = styled(ToursItemWrapper)`
 `;
 
 export const ToursItemBackThird = styled(ToursItemWrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transform: rotateY(180deg);
   background-image: linear-gradient(
     to right bottom,
@@ -69,7 +81,7 @@ export const ToursItemBackThird = styled(ToursItemWrapper)`
 `;
 
 export const ToursItem = styled.li`
-  height: 50rem;
+  height: 52rem;
   width: 100%;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -110,8 +122,8 @@ export const ToursItemImg = styled.div`
 export const ToursItemImgFirst = styled(ToursItemImg)`
   background-image: linear-gradient(
       to right bottom,
-      ${(p) => p.theme.colors.blueColor},
-      ${(p) => p.theme.colors.blueColorDark}
+      ${(p) => p.theme.colors.blueColorLowOp},
+      ${(p) => p.theme.colors.blueColorDarkLowOp}
     ),
     url(${oceanImg});
 
@@ -120,8 +132,8 @@ export const ToursItemImgFirst = styled(ToursItemImg)`
     only screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(
         to right bottom,
-        ${(p) => p.theme.colors.blueColor},
-        ${(p) => p.theme.colors.blueColorDark}
+        ${(p) => p.theme.colors.blueColorLowOp},
+        ${(p) => p.theme.colors.blueColorDarkLowOp}
       ),
       url(${oceanImgDesktop});
   }
@@ -129,8 +141,8 @@ export const ToursItemImgFirst = styled(ToursItemImg)`
 export const ToursItemImgSecond = styled(ToursItemImg)`
   background-image: linear-gradient(
       to right bottom,
-      ${(p) => p.theme.colors.orangeColor},
-      ${(p) => p.theme.colors.orangeColorDark}
+      ${(p) => p.theme.colors.orangeColorLowOp},
+      ${(p) => p.theme.colors.orangeColorDarkLowOp}
     ),
     url(${mountainImg});
 
@@ -139,8 +151,8 @@ export const ToursItemImgSecond = styled(ToursItemImg)`
     only screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(
         to right bottom,
-        ${(p) => p.theme.colors.orangeColor},
-        ${(p) => p.theme.colors.orangeColorDark}
+        ${(p) => p.theme.colors.orangeColorLowOp},
+        ${(p) => p.theme.colors.orangeColorDarkLowOp}
       ),
       url(${mountainImgDesktop});
   }
@@ -149,8 +161,8 @@ export const ToursItemImgSecond = styled(ToursItemImg)`
 export const ToursItemImgThird = styled(ToursItemImg)`
   background-image: linear-gradient(
       to right bottom,
-      ${(p) => p.theme.colors.greenColorDark},
-      ${(p) => p.theme.colors.greenColorDark}
+      ${(p) => p.theme.colors.greenColorDarkLowOp},
+      ${(p) => p.theme.colors.greenColorDarkLowOp}
     ),
     url(${snowImg});
 
@@ -159,9 +171,131 @@ export const ToursItemImgThird = styled(ToursItemImg)`
     only screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(
         to right bottom,
-        ${(p) => p.theme.colors.greenColorDark},
-        ${(p) => p.theme.colors.greenColorDark}
+        ${(p) => p.theme.colors.greenColorDarkLowOp},
+        ${(p) => p.theme.colors.greenColorDarkLowOp}
       ),
       url(${snowImgDesktop});
   }
+`;
+
+export const ToursHeading = styled.h4`
+  font-size: 2.8rem;
+  text-align: uppercase;
+  text-align: right;
+  color: ${({ theme }) => theme.colors.whiteColor};
+  font-family: ${primaryFont};
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  width: 75%;
+  position: absolute;
+  top: 14.4rem;
+  right: 2rem;
+`;
+
+export const ToursHeadingBack = styled.span`
+  padding: 0 1.2rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+`;
+
+export const ToursHeadingBackFirst = styled(ToursHeadingBack)`
+  background-image: linear-gradient(
+    to right bottom,
+    ${(p) => p.theme.colors.blueColorLowOp},
+    ${(p) => p.theme.colors.blueColorDarkLowOp}
+  );
+`;
+
+export const ToursHeadingBackSecond = styled(ToursHeadingBack)`
+  background-image: linear-gradient(
+    to right bottom,
+    ${(p) => p.theme.colors.orangeColorLowOp},
+    ${(p) => p.theme.colors.orangeColorDarkLowOp}
+  );
+`;
+
+export const ToursHeadingBackThird = styled(ToursHeadingBack)`
+  background-image: linear-gradient(
+    to right bottom,
+    ${(p) => p.theme.colors.greenColorLowOp},
+    ${(p) => p.theme.colors.greenColorDarkLowOp}
+  );
+`;
+
+export const ToursCardMenu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  gap: 1.2rem;
+  padding: 1.2rem;
+`;
+
+export const ToursCardMenuItem = styled.li`
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: ${secondaryFont};
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  padding: 0.8rem 1.2rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.greyColor};
+    padding-bottom: 1.2rem;
+  }
+`;
+
+export const ToursItemBackWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+  padding: 2.4rem;
+`;
+
+export const ToursItemPriceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const TourItemPrice = styled.span`
+  font-size: 6.2rem;
+  font-family: ${secondaryFont};
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.whiteColor};
+`;
+
+export const TourItemSubPrice = styled.span`
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-family: ${secondaryFont};
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.whiteColor};
+`;
+
+export const TourItemCardDescription = styled.p`
+  font-family: ${secondaryFont};
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.whiteColor};
+`;
+
+export const ToursItemCardBtn = styled.button`
+  padding: 1.2rem 2.4rem;
+  border-radius: 50rem;
+  background-color: ${({ theme }) => theme.colors.whiteColor};
+  font-family: ${secondaryFont};
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: ${({ theme }) => theme.colors.mainTextColor};
 `;
