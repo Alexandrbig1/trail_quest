@@ -1,0 +1,32 @@
+[
+  {
+    "id": "review001",
+    "stars": 5,
+    "review": "Trail Quest exceeded my expectations! The guides were knowledgeable and friendly, and the trails were breathtaking. Crater Lake was absolutely stunning. Highly recommend!",
+    "name": "Emma Johnson"
+  },
+  {
+    "id": "review002",
+    "stars": 5,
+    "review": "An unforgettable adventure! The Columbia River Gorge was mesmerizing, and the hike to Multnomah Falls was an experience I'll never forget. Trail Quest made the trip seamless and enjoyable.",
+    "name": "Michael Brown"
+  },
+  {
+    "id": "review003",
+    "stars": 4,
+    "review": "Great experience with Trail Quest. The guides were excellent, and the views were spectacular. Would have loved a bit more time at each location, but overall a wonderful trip.",
+    "name": "Sophia Lee"
+  },
+  {
+    "id": "review004",
+    "stars": 5,
+    "review": "Absolutely amazing! The hikes were well-planned, and the scenery was breathtaking. The guides were enthusiastic and made the experience even better. Crater Lake was a highlight for sure.",
+    "name": "David Martinez"
+  },
+  {
+    "id": "review005",
+    "stars": 4.5,
+    "review": "A fantastic adventure with Trail Quest. The trails were beautiful, and the guides were very knowledgeable. Multnomah Falls was incredible. Only wish we had more time to explore each spot.",
+    "name": "Olivia Williams"
+  }
+]

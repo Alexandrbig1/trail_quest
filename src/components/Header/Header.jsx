@@ -8,6 +8,7 @@ const menuLists = [
   { to: "/about", list: "About" },
   { to: "/features", list: "Features" },
   { to: "/tours", list: "Tours" },
+  { to: "/reviews", list: "Reviews" },
   { to: "/contact", list: "Contact" },
 ];
 

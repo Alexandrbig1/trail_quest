@@ -34,7 +34,6 @@ export const ToursItemWrapper = styled.div`
   border-radius: 1.2rem;
   transition: all 1s ease;
   box-shadow: 0 1.5rem 4rem ${({ theme }) => theme.colors.featuresCardBoxShadow};
-  overflow: hidden;
 `;
 
 export const ToursItemFront = styled(ToursItemWrapper)`
@@ -113,6 +112,8 @@ export const ToursItem = styled.li`
 
 export const ToursItemImg = styled.div`
   background-size: cover;
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
   height: 23rem;
   background-blend-mode: screen;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
