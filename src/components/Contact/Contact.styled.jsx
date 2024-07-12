@@ -21,8 +21,10 @@ export const ContactWrapper = styled.div`
   max-width: 375px;
   margin: 0 auto;
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.9) 50%
+      105deg,
+      ${(p) => p.theme.colors.whiteColorVeryLowOp} 0%,
+      ${(p) => p.theme.colors.whiteColorVeryLowOp} 50%,
+      transparent 50%
     ),
     url(${contactImg});
   background-size: cover;
@@ -43,6 +45,12 @@ export const ContactWrapper = styled.div`
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
-    background-image: url(${contactImgDesktop});
+    background-image: linear-gradient(
+        105deg,
+        ${(p) => p.theme.colors.whiteColorVeryLowOp} 0%,
+        ${(p) => p.theme.colors.whiteColorVeryLowOp} 50%,
+        transparent 50%
+      ),
+      url(${contactImgDesktop});
   }
 `;
