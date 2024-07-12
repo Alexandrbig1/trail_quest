@@ -54,6 +54,7 @@ const theme = {
       featuresCardBoxShadow: "rgba(0, 0, 0, 0.15)",
       greyColor: "#d6d3d1",
       inputColor: "#fafaf9",
+      errorLightColor: "#f87171",
     },
   },
   dark: {
@@ -92,6 +93,7 @@ const theme = {
       featuresCardBoxShadow: "rgba(255, 255, 255, 0.15)",
       greyColor: "#78716c",
       inputColor: "#44403c",
+      errorLightColor: "#f87171",
     },
   },
 };

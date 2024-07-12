@@ -3,19 +3,42 @@ import { z } from "zod";
 import { toast } from "react-toastify";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { commonToastOptions } from "../../../helpers/toastOptions";
-import { FormBtn, FormInput, FormWrapper } from "./Form.styled";
+import { IoPerson } from "react-icons/io5";
+import { MdOutlineMailOutline } from "react-icons/md";
+import {
+  FormBtn,
+  FormCustomRadio,
+  FormHiddenRadio,
+  FormInput,
+  FormInputLabel,
+  FormInputWrapper,
+  FormLabelIcon,
+  FormLegend,
+  FormRadioButtonsWrapper,
+  FormRadioLabel,
+  FormWrapper,
+} from "./Form.styled";
 import { capitalizeName } from "../../../helpers/capitalizeWord";
 
 const schema = z.object({
-  name: z.string().min(1),
+  name: z.string().min(2),
   email: z.string().email(),
   groupSize: z.enum(["small", "large"]),
 });
 
 function Form() {
-  const { register, handleSubmit, reset } = useForm({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
     resolver: zodResolver(schema),
+    mode: "onChange",
   });
+  // const { register, handleSubmit, reset } = useForm({
+  //   resolver: zodResolver(schema),
+  // });
 
   const onSubmit = (data) => {
     toast.success(
@@ -50,42 +73,60 @@ function Form() {
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormInput
-        {...register("name")}
-        type="text"
-        id="name"
-        placeholder="Your Name"
-        aria-label="Your Name"
-        aria-required="true"
-      />
-      <FormInput
-        {...register("email")}
-        type="email"
-        id="email"
-        placeholder="Your E-mail"
-        aria-label="Your E-mail"
-        aria-required="true"
-      />
-      <div>
-        <label>
-          <input
+      <FormInputWrapper>
+        <FormLegend>Contact Information</FormLegend>
+        <FormInputLabel htmlFor="name">
+          <FormInput
+            {...register("name")}
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            aria-label="Your Name"
+            aria-required="true"
+            $error={!!errors.name}
+          />
+          <FormLabelIcon>
+            <IoPerson />
+          </FormLabelIcon>
+        </FormInputLabel>
+        <FormInputLabel htmlFor="email">
+          <FormInput
+            {...register("email")}
+            type="email"
+            id="email"
+            placeholder="Your E-mail"
+            aria-label="Your E-mail"
+            aria-required="true"
+            $error={!!errors.email}
+          />
+          <FormLabelIcon>
+            <MdOutlineMailOutline />
+          </FormLabelIcon>
+        </FormInputLabel>
+      </FormInputWrapper>
+      <FormRadioButtonsWrapper>
+        <FormLegend>Group Size</FormLegend>
+        <FormRadioLabel>
+          <FormHiddenRadio
             {...register("groupSize")}
             type="radio"
             value="small"
             aria-label="Small tour group"
           />
-          Small tour group
-        </label>
-        <label>
-          <input
+          <FormCustomRadio />
+          <span>Small tour group</span>
+        </FormRadioLabel>
+        <FormRadioLabel>
+          <FormHiddenRadio
             {...register("groupSize")}
             type="radio"
             value="large"
             aria-label="Large tour group"
           />
-          Large tour group
-        </label>
-      </div>
+          <FormCustomRadio />
+          <span>Large tour group</span>
+        </FormRadioLabel>
+      </FormRadioButtonsWrapper>
       <FormBtn type="submit" aria-label="Submit the form">
         Book Now!
       </FormBtn>
