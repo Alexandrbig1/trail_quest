@@ -1,5 +1,13 @@
+import { FormWrapper } from "./Form.styled";
+
 function Form() {
-  return <div>form</div>;
+  return (
+    <FormWrapper>
+      <input type="text" />
+      <input type="email" />
+      <button>Book</button>
+    </FormWrapper>
+  );
 }
 
 export default Form;

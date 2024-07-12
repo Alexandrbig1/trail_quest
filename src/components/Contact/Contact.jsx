@@ -1,8 +1,13 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
 import { useEffect } from "react";
-import { ContactContainer, ContactWrapper } from "./Contact.styled";
+import {
+  ContactContainer,
+  ContactWrapper,
+  FormWrapper,
+} from "./Contact.styled";
 import Form from "../UI/Form/Form";
+import HeadingSection from "../UI/Heading/Heading";
 
 function Contact() {
   const { setActiveSection } = useActiveSection();
@@ -20,7 +25,10 @@ function Contact() {
   return (
     <ContactContainer id="contact" ref={contactRef}>
       <ContactWrapper>
-        <Form />
+        <FormWrapper>
+          <HeadingSection>Contact</HeadingSection>
+          <Form />
+        </FormWrapper>
       </ContactWrapper>
     </ContactContainer>
   );

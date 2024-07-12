@@ -54,3 +54,14 @@ export const ContactWrapper = styled.div`
       url(${contactImgDesktop});
   }
 `;
+
+export const FormWrapper = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+`;
