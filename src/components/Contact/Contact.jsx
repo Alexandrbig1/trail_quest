@@ -26,7 +26,7 @@ function Contact() {
     <ContactContainer id="contact" ref={contactRef}>
       <ContactWrapper>
         <FormWrapper>
-          <HeadingSection>Contact</HeadingSection>
+          <HeadingSection>Start Booking now!</HeadingSection>
           <Form />
         </FormWrapper>
       </ContactWrapper>
