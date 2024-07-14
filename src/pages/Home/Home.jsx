@@ -7,6 +7,7 @@ import Contact from "../../components/Contact/Contact";
 import Tours from "../../components/Tours/Tours";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import Sponsor from "../../components/Sponsor/Sponsor";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 function Home() {
   return (
@@ -48,6 +49,7 @@ function Home() {
         <Testimonials />
         <Contact />
         <Sponsor />
+        <Subscribe />
       </main>
     </>
   );
