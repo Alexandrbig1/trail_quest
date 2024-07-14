@@ -6,6 +6,7 @@ import Features from "../../components/Features/Features";
 import Contact from "../../components/Contact/Contact";
 import Tours from "../../components/Tours/Tours";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import Sponsor from "../../components/Sponsor/Sponsor";
 
 function Home() {
   return (
@@ -46,6 +47,7 @@ function Home() {
         </Container>
         <Testimonials />
         <Contact />
+        <Sponsor />
       </main>
     </>
   );
