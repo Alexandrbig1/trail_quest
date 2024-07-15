@@ -1,5 +1,6 @@
 import axios from "axios";
-import { EMAIL_URL } from "./apiService";
+
+const { EMAIL_URL } = import.meta.env;
 
 export const fetchEmailDB = async (data) => {
   try {

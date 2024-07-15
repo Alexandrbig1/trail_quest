@@ -57,7 +57,7 @@ function Subscribe() {
       );
 
       toast.success(
-        "Successfully subscribed! We'll keep you updated with regular deals and fresh trip ideas. Thank you!",
+        "Successfully subscribed! We'll keep you updated with regular deals and fresh tour ideas. Thank you!",
         commonToastOptions
       );
       e.target.email.value = "";
