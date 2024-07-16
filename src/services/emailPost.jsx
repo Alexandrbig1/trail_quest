@@ -1,14 +1,13 @@
 import axios from "axios";
 
-const { EMAIL_URL } = import.meta.env;
+const emailUrl = import.meta.env.VITE_EMAIL_URL;
 
 export const fetchEmailDB = async (data) => {
   try {
-    console.log(data);
-    const res = await axios.post(`${EMAIL_URL}/OregonTours.json`, data);
-    console.log(res.data);
+    const today = { ...data, date: new Date().toISOString().slice(0, 10) };
+    const res = await axios.post(`${emailUrl}/OregonTours.json`, today);
     return res.data;
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
 };

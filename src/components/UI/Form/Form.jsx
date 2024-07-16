@@ -5,6 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { commonToastOptions } from "../../../helpers/toastOptions";
 import { IoPerson } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { capitalizeName } from "../../../helpers/capitalizeWord";
+import { fetchEmailDB } from "../../../services/emailPost";
 import {
   FormBtn,
   FormCustomRadio,
@@ -18,7 +20,6 @@ import {
   FormRadioLabel,
   FormWrapper,
 } from "./Form.styled";
-import { capitalizeName } from "../../../helpers/capitalizeWord";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -36,17 +37,17 @@ function Form() {
     resolver: zodResolver(schema),
     mode: "onChange",
   });
-  // const { register, handleSubmit, reset } = useForm({
-  //   resolver: zodResolver(schema),
-  // });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     toast.success(
       `Thank you ${capitalizeName(
         data.name
       )} for your message! We will get back to you shortly.`,
       commonToastOptions
     );
+
+    await fetchEmailDB(data);
+
     reset();
   };
 

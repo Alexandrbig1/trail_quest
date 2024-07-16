@@ -1,4 +1,3 @@
-import emailjs from "@emailjs/browser";
 import { fetchEmailDB } from "../../services/emailPost";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
@@ -15,9 +14,6 @@ import {
   SubscribeTitleWrapper,
   SubscribeWrapper,
 } from "./Subscribe.styled";
-
-const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
-  import.meta.env;
 
 function Subscribe() {
   const form = useRef();
@@ -46,15 +42,8 @@ function Subscribe() {
     }
 
     try {
-      await fetchEmailDB(email);
-      await emailjs.sendForm(
-        VITE_EMAIL_ID,
-        VITE_EMAIL_TEMPLATE_ID,
-        form.current,
-        {
-          publicKey: VITE_EMAIL_API_KEY,
-        }
-      );
+      const subscribe = { email, subscribed: true };
+      await fetchEmailDB(subscribe);
 
       toast.success(
         "Successfully subscribed! We'll keep you updated with regular deals and fresh tour ideas. Thank you!",
