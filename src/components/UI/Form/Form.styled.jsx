@@ -110,6 +110,12 @@ export const FormLegend = styled.legend`
   width: 1px;
   height: 1px;
   overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  padding: 0;
+  margin: -1px;
 `;
 
 export const FormRadioButtonsWrapper = styled.fieldset`
@@ -124,14 +130,6 @@ export const FormRadioButtonsWrapper = styled.fieldset`
 
 export const FormHiddenRadio = styled.input`
   display: none;
-`;
-
-export const FormRadioLabel = styled.label`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  margin: 0.5rem 0;
 `;
 
 export const FormCustomRadio = styled.span`
@@ -157,6 +155,25 @@ export const FormCustomRadio = styled.span`
 
   ${FormHiddenRadio}:checked + & {
     &:after {
+      opacity: 1;
+    }
+  }
+`;
+
+export const FormRadioLabel = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  &:hover,
+  &:focus {
+    ${FormCustomRadio}:after {
       opacity: 1;
     }
   }

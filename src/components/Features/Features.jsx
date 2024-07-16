@@ -30,10 +30,12 @@ function Features() {
     <FeaturesContainer id="features" ref={featuresRef}>
       <Container>
         <FeaturesMenu>
-          {FeaturesData.map(({ id, title, description }) => (
+          {FeaturesData.map(({ id, title, iconImg, description }) => (
             <FeaturesMenuItems key={id}>
               <FeaturesIconWrapper>
-                <FeaturesIcon />
+                <FeaturesIcon aria-label={title}>
+                  <use href={iconImg}></use>
+                </FeaturesIcon>
               </FeaturesIconWrapper>
               <HeadingText>{title}</HeadingText>
               <SectionParagraph>{description}</SectionParagraph>

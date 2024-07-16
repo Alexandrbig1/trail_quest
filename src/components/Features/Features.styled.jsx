@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import featuresImg from "@/assets/features.jpg";
 import featuresImgDesktop from "@/assets/features@2x.jpg";
-import { MdOutlineModeOfTravel } from "react-icons/md";
 
 export const FeaturesContainer = styled.section`
   width: 100%;
@@ -54,16 +53,25 @@ export const FeaturesMenuItems = styled.li`
   padding: 2.4rem;
   border-radius: 1.2rem;
   background-color: ${(p) => p.theme.colors.whiteColorLowOp};
+  position: relative;
+  padding-top: 4.8rem;
+  border-top: 1px solid ${(p) => p.theme.colors.accentColor};
 `;
 
 export const FeaturesIconWrapper = styled.div`
   border-radius: 50rem;
   background-color: ${(p) => p.theme.colors.mainBgColor};
-  padding: 1rem;
+  overflow: hidden;
+  padding: 0.8rem;
   margin-bottom: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid ${(p) => p.theme.colors.accentColor};
 `;
 
-export const FeaturesIcon = styled(MdOutlineModeOfTravel)`
-  font-size: 3.6rem;
-  color: ${(p) => p.theme.colors.accentDarkColor};
+export const FeaturesIcon = styled.svg`
+  width: 5.2rem;
+  height: 5.2rem;
 `;
