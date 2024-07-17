@@ -10,9 +10,9 @@ export const ContactContainer = styled.section`
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(
-    to left bottom,
-    ${(p) => p.theme.colors.greenColor},
-    ${(p) => p.theme.colors.greenColorDark}
+    to right bottom,
+    ${(p) => p.theme.colors.blueColorLowOp},
+    ${(p) => p.theme.colors.greenColorDarkLowOp}
   );
 `;
 

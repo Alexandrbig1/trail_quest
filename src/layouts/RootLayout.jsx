@@ -1,24 +1,24 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router";
-// import Footer from "../components/Footer/Footer";
-// import { Main } from "../components/layout";
 import MenuBurger from "../components/MenuBurger/MenuBurger";
 import Loader from "../components/UI/Loader/Loader";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import { MainContainer, RootLayoutContainer } from "../components/layout";
 
 // eslint-disable-next-line react/prop-types
 function RootLayout() {
   return (
-    <div>
+    <RootLayoutContainer>
       <Header />
       <MenuBurger />
-      <div>
+      <MainContainer>
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
-      </div>
-      {/* <Footer /> */}
-    </div>
+      </MainContainer>
+      <Footer />
+    </RootLayoutContainer>
   );
 }
 

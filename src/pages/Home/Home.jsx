@@ -37,20 +37,18 @@ function Home() {
         <meta name="twitter:creator" content="@alexsmagin29" />
         <meta name="twitter:site" content="@alexsmagin29" />
       </Helmet>
-      <main>
-        <Hero />
-        <Container>
-          <About />
-        </Container>
-        <Features />
-        <Container>
-          <Tours />
-        </Container>
-        <Testimonials />
-        <Contact />
-        <Sponsor />
-        <Subscribe />
-      </main>
+      <Hero />
+      <Container>
+        <About />
+      </Container>
+      <Features />
+      <Container>
+        <Tours />
+      </Container>
+      <Testimonials />
+      <Contact />
+      <Sponsor />
+      <Subscribe />
     </>
   );
 }

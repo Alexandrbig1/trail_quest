@@ -88,7 +88,7 @@ export const FormBtn = styled.button`
   background: none;
   width: 75%;
   padding: 1.2rem 2.4rem;
-  background-color: ${(p) => p.theme.colors.accentColor};
+  background-color: ${(p) => p.theme.colors.blueColor};
   border-radius: 1.2rem;
   font-family: ${primaryFont};
   font-weight: 400;
@@ -96,11 +96,10 @@ export const FormBtn = styled.button`
   line-height: 1.5;
   letter-spacing: -0.02em;
   transition: all var(--primary-transition);
-  color: ${(p) => p.theme.colors.blackColor};
+  color: ${(p) => p.theme.colors.whiteColor};
 
   &:hover {
     background-color: ${(p) => p.theme.colors.accentDarkColor};
-    color: ${(p) => p.theme.colors.whiteColor};
   }
 `;
 

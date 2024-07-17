@@ -4,6 +4,17 @@ import styled from "styled-components";
 // import heroBgDesktop from "@/assets/hero_bg_laptop.jpg";
 // import heroBg2x from "@/assets/hero_bg@2x.jpg";
 
+export const RootLayoutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+`;
+
+export const MainContainer = styled.main`
+  flex-grow: 1;
+`;
+
 export const Container = styled.div`
   width: 100%;
   max-width: 375px;

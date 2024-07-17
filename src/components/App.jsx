@@ -16,6 +16,8 @@ import {
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const Privacy = lazy(() => import("../pages/Privacy/Privacy"));
+const Terms = lazy(() => import("../pages/Terms/Terms"));
 
 const theme = {
   light: {
@@ -55,6 +57,7 @@ const theme = {
       greyColor: "#d6d3d1",
       inputColor: "#fafaf9",
       errorLightColor: "#f87171",
+      footerColor: "#71717a",
     },
   },
   dark: {
@@ -94,6 +97,7 @@ const theme = {
       greyColor: "#78716c",
       inputColor: "#44403c",
       errorLightColor: "#f87171",
+      footerColor: "#71717a",
     },
   },
 };
@@ -105,6 +109,8 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )

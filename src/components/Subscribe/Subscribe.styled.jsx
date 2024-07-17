@@ -17,7 +17,7 @@ export const SubscribeWrapper = styled.div`
   max-width: 94rem;
   width: 100%;
   height: 100%;
-  background-color: ${(p) => p.theme.colors.greenColorDarkLowOp};
+  background-color: ${(p) => p.theme.colors.accentColor};
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -98,6 +98,7 @@ export const SubscribeInput = styled.input`
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
+  transition: all var(--primary-transition);
 
   @media (min-width: 480px) {
     width: 100%;
@@ -113,6 +114,11 @@ export const SubscribeInput = styled.input`
     line-height: 1.25;
     color: ${(p) => p.theme.colors.inputTextColor};
   }
+
+  &:hover,
+  &:focus {
+    background-color: ${(p) => p.theme.colors.whiteColor};
+  }
 `;
 
 export const SubscribeButton = styled.button`
@@ -120,7 +126,7 @@ export const SubscribeButton = styled.button`
   background: none;
   outline: none;
   border: none;
-  background-color: ${(p) => p.theme.colors.greenColorDark};
+  background-color: ${(p) => p.theme.colors.blueColor};
   border-radius: 1rem;
   width: 100%;
   height: 56px;
@@ -142,8 +148,9 @@ export const SubscribeButton = styled.button`
     border-bottom-right-radius: 10px;
   }
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.greenColorDarkLowOp};
+  &:hover,
+  &:focus {
+    background-color: ${(p) => p.theme.colors.accentDarkColor};
     cursor: pointer;
   }
 `;
