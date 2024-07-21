@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import HeadingSection from "../UI/Heading/Heading";
 import { useActiveSection } from "../../context/activeSection";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import AboutImgWrap from "./AboutImgWrap";
 import HeadingText from "../UI/Heading/HeadingText";
 import SectionParagraph from "../UI/SectionParagraph/SectionParagraph";
@@ -15,7 +15,7 @@ import {
   AboutWrapper,
 } from "./About.styled";
 
-function About() {
+const About = React.memo(() => {
   const { setActiveSection } = useActiveSection();
 
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -68,6 +68,8 @@ function About() {
       </AboutWrapper>
     </AboutContainer>
   );
-}
+});
+
+About.displayName = "About";
 
 export default About;

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "coastal_explorer_tour",
+    "title": "Coastal Explorer Tour",
+    "coastalImg": true,
+    "menuItems": [
+      "Coastal sightseeing",
+      "Marine wildlife observation",
+      "Beach exploration",
+      "Boat excursion",
+      "Difficulty: easy"
+    ],
+    "price": "249$",
+    "description": "Explore the beauty of Oregon's coastline with our Ocean Tours. Discover hidden gems and breathtaking views along the Pacific Ocean."
+  },
+  {
+    "id": "crater_lake_exploration",
+    "title": "Crater Lake Exploration",
+    "craterLakeImg": true,
+    "menuItems": [
+      "Scenic hiking trails",
+      "Wildlife encounters",
+      "Mountain photography",
+      "Guided hikes",
+      "Difficulty: moderate"
+    ],
+    "price": "249$",
+    "description": "Embark on an adventure through Oregon's majestic mountains. Experience hiking trails, wildlife, and stunning landscapes with our Mountain Tours."
+  },
+  {
+    "id": "winter_wonderland_excursion",
+    "title": "Winter Wonderland Excursion",
+    "winterImg": true,
+    "menuItems": [
+      "Skiing and snowboarding",
+      "Snowshoeing",
+      "Snowmobile tours",
+      "Winter photography",
+      "Difficulty: challenging"
+    ],
+    "price": "249$",
+    "description": "Enjoy thrilling snow activities in Oregon's winter wonderland. From skiing to snowboarding, our Snow Adventures offer fun for everyone."
+  }
+]

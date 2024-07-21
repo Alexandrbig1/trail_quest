@@ -22,9 +22,9 @@ import {
 } from "./Form.styled";
 
 const schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  groupSize: z.enum(["small", "large"]),
+  name: z.string().min(2, "Name is required."),
+  email: z.string().email("Invalid email address."),
+  groupSize: z.enum(["small", "large"], "Please select a group size."),
 });
 
 function Form() {
@@ -39,31 +39,30 @@ function Form() {
   });
 
   const onSubmit = async (data) => {
-    toast.success(
-      `Thank you ${capitalizeName(
-        data.name
-      )} for your message! We will get back to you shortly.`,
-      commonToastOptions
-    );
-
-    await fetchEmailDB(data);
-
-    reset();
+    try {
+      await fetchEmailDB(data);
+      toast.success(
+        `Thank you ${capitalizeName(
+          data.name
+        )} for your message! We will get back to you shortly.`,
+        commonToastOptions
+      );
+      reset();
+    } catch (error) {
+      toast.error(
+        "There was an error submitting the form. Please try again later.",
+        commonToastOptions
+      );
+    }
   };
 
   const onError = (errors) => {
     if (errors.name) {
-      toast.error(
-        "Name is required. Please enter your name.",
-        commonToastOptions
-      );
+      toast.error(errors.name.message, commonToastOptions);
     } else if (errors.email) {
-      toast.error(
-        "Invalid email address. Please enter a valid email.",
-        commonToastOptions
-      );
+      toast.error(errors.email.message, commonToastOptions);
     } else if (errors.groupSize) {
-      toast.error("Please select a group size.", commonToastOptions);
+      toast.error(errors.groupSize.message, commonToastOptions);
     } else {
       toast.error(
         "There was an error submitting the form. Please check your inputs.",

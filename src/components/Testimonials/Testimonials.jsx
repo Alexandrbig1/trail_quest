@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import reviews from "../../data/reviews.json";
 import HeadingSection from "../UI/Heading/Heading";
 import StarRating from "../UI/StarRating/StarRating";
+import PropTypes from "prop-types";
 import { IoIosQuote } from "react-icons/io";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -27,6 +28,9 @@ import {
   TestimonialsSwiperContainer,
 } from "./Testimonials.styled";
 
+const AUTOPLAY_DELAY = 5000;
+const SWIPER_SPEED = 600;
+
 function Testimonials() {
   return (
     <TestimonialsContainer id="reviews">
@@ -41,8 +45,8 @@ function Testimonials() {
           <Swiper
             slidesPerView={1}
             // loop={true}
-            speed={600}
-            navigation={true}
+            speed={SWIPER_SPEED}
+            navigation
             pagination={{
               // el: `.${cl.paginationContainer}`,
               clickable: true,
@@ -50,10 +54,10 @@ function Testimonials() {
               // bulletClass: cl.paginationBullet,
               // bulletActiveClass: cl.paginationBulletActive,
             }}
-            mousewheel={true}
-            keyboard={true}
+            mousewheel
+            keyboard
             autoplay={{
-              delay: 5000,
+              delay: AUTOPLAY_DELAY,
               disableOnInteraction: false,
             }}
             modules={[Pagination, Autoplay, Navigation, Mousewheel, Keyboard]}
@@ -81,5 +85,17 @@ function Testimonials() {
     </TestimonialsContainer>
   );
 }
+
+// Testimonials.propTypes = {
+//   reviews: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired,
+//       stars: PropTypes.number.isRequired,
+//       review: PropTypes.string.isRequired,
+//       img: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+// };
 
 export default Testimonials;

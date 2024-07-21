@@ -1,15 +1,15 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import Form from "../UI/Form/Form";
+import HeadingSection from "../UI/Heading/Heading";
 import {
   ContactContainer,
   ContactWrapper,
   FormWrapper,
 } from "./Contact.styled";
-import Form from "../UI/Form/Form";
-import HeadingSection from "../UI/Heading/Heading";
 
-function Contact() {
+const Contact = React.memo(() => {
   const { setActiveSection } = useActiveSection();
 
   const { ref: contactRef, inView: contactInView } = useInView({
@@ -32,6 +32,8 @@ function Contact() {
       </ContactWrapper>
     </ContactContainer>
   );
-}
+});
+
+Contact.displayName = "Contact";
 
 export default Contact;

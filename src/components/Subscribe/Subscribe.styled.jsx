@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { primaryFont, secondaryFont } from "../fonts";
-import roadImg from "../../../public/images/road.jpg";
+import roadImg from "@/assets/road.jpg";
 
 export const SubscribeContainer = styled.section`
   margin: 4.8rem auto;

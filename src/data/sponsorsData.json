@@ -1,0 +1,7 @@
+[
+  { "id": "sponsor001", "src": "images/sponsor.png", "alt": "Sponsor 1" },
+  { "id": "sponsor002", "src": "images/sponsor1.png", "alt": "Sponsor 2" },
+  { "id": "sponsor003", "src": "images/sponsor2.png", "alt": "Sponsor 3" },
+  { "id": "sponsor004", "src": "images/sponsor3.png", "alt": "Sponsor 4" },
+  { "id": "sponsor005", "src": "images/sponsor4.png", "alt": "Sponsor 5" }
+]

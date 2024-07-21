@@ -1,6 +1,10 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import HeadingText from "../UI/Heading/HeadingText";
+import SectionParagraph from "../UI/SectionParagraph/SectionParagraph";
+import FeaturesData from "../../data/featuresData.json";
+import { Container } from "../layout";
 import {
   FeaturesContainer,
   FeaturesIcon,
@@ -8,12 +12,8 @@ import {
   FeaturesMenu,
   FeaturesMenuItems,
 } from "./Features.styled";
-import HeadingText from "../UI/Heading/HeadingText";
-import SectionParagraph from "../UI/SectionParagraph/SectionParagraph";
-import FeaturesData from "../../data/featuresData.json";
-import { Container } from "../layout";
 
-function Features() {
+const Features = React.memo(() => {
   const { setActiveSection } = useActiveSection();
 
   const { ref: featuresRef, inView: featuresInView } = useInView({
@@ -45,6 +45,8 @@ function Features() {
       </Container>
     </FeaturesContainer>
   );
-}
+});
+
+Features.displayName = "Features";
 
 export default Features;

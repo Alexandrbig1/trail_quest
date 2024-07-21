@@ -1,8 +1,8 @@
 import { fetchEmailDB } from "../../services/emailPost";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
-import { useRef } from "react";
 import emailRegex from "../../regex/emailRegex";
+import { useRef } from "react";
 import {
   RoadImg,
   SubscribeButton,

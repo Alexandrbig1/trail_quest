@@ -64,7 +64,7 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const HeroTItleWrapper = styled.div`
+export const HeroTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

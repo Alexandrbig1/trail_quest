@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
 import {
   HeroButton,
   HeroContainer,
   HeroSubTitle,
-  HeroTItleWrapper,
+  HeroTitleWrapper,
   HeroTitle,
   HeroWrapper,
 } from "./Hero.styled";
 
-function Hero() {
+const Hero = React.memo(() => {
   const { setActiveSection } = useActiveSection();
   const { ref: homeRef, inView: homeInView } = useInView({ threshold: 0.5 });
 
@@ -23,7 +23,7 @@ function Hero() {
   return (
     <HeroWrapper id="home" ref={homeRef}>
       <HeroContainer>
-        <HeroTItleWrapper>
+        <HeroTitleWrapper>
           <HeroTitle>
             Oregon's
             <br /> Hiking Adventures
@@ -33,11 +33,13 @@ function Hero() {
             for guided hikes through scenic trails, from lush forests to rugged
             mountains. Your adventure awaits!
           </HeroSubTitle>
-        </HeroTItleWrapper>
+        </HeroTitleWrapper>
         <HeroButton>Discover our tours</HeroButton>
       </HeroContainer>
     </HeroWrapper>
   );
-}
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;
