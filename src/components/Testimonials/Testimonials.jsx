@@ -27,11 +27,37 @@ import {
   TestimonialsContainer,
   TestimonialsSwiperContainer,
 } from "./Testimonials.styled";
+import { useMemo } from "react";
 
 const AUTOPLAY_DELAY = 5000;
 const SWIPER_SPEED = 600;
 
 function Testimonials() {
+  const swiperSettings = useMemo(
+    () => ({
+      slidesPerView: 1,
+      speed: SWIPER_SPEED,
+      // loop={true}
+      navigation: true,
+      pagination: {
+        // el: `.${cl.paginationContainer}`,
+        clickable: true,
+        dynamicBullets: true,
+        // bulletClass: cl.paginationBullet,
+        // bulletActiveClass: cl.paginationBulletActive,
+      },
+      mousewheel: true,
+      keyboard: true,
+      autoplay: {
+        delay: AUTOPLAY_DELAY,
+        disableOnInteraction: false,
+      },
+      modules: [Pagination, Autoplay, Navigation, Mousewheel, Keyboard],
+      // className={cl.swiperWrapper}
+    }),
+    []
+  );
+
   return (
     <TestimonialsContainer id="reviews">
       <ReviewsVideoBg autoPlay muted loop preload="auto">
@@ -42,27 +68,7 @@ function Testimonials() {
       <TestimonialsSwiperContainer>
         <HeadingSection>We make people happy</HeadingSection>
         <SwiperContainer>
-          <Swiper
-            slidesPerView={1}
-            // loop={true}
-            speed={SWIPER_SPEED}
-            navigation
-            pagination={{
-              // el: `.${cl.paginationContainer}`,
-              clickable: true,
-              dynamicBullets: true,
-              // bulletClass: cl.paginationBullet,
-              // bulletActiveClass: cl.paginationBulletActive,
-            }}
-            mousewheel
-            keyboard
-            autoplay={{
-              delay: AUTOPLAY_DELAY,
-              disableOnInteraction: false,
-            }}
-            modules={[Pagination, Autoplay, Navigation, Mousewheel, Keyboard]}
-            // className={cl.swiperWrapper}
-          >
+          <Swiper {...swiperSettings}>
             {reviews.map(({ id, name, stars, review, img }) => (
               <SwiperSlide key={id}>
                 <SlideWrapper>
@@ -86,16 +92,16 @@ function Testimonials() {
   );
 }
 
-// Testimonials.propTypes = {
-//   reviews: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       stars: PropTypes.number.isRequired,
-//       review: PropTypes.string.isRequired,
-//       img: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
+Testimonials.propTypes = {
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      stars: PropTypes.number.isRequired,
+      review: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 export default Testimonials;
