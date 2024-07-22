@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   width: 100%;
+  background-color: ${(p) => p.theme.colors.footerColor};
+`;
+
+export const FooterWrapper = styled.div`
+  margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
   padding: 1.2rem 2.4rem;
-  background-color: ${(p) => p.theme.colors.footerColor};
 
   display: flex;
   flex-direction: column;
