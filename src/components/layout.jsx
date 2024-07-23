@@ -1,8 +1,4 @@
 import styled from "styled-components";
-// import heroBgMobile from "@/assets/hero_bg_mobile.jpg";
-// import heroBgTablet from "@/assets/hero_bg_tablet.jpg";
-// import heroBgDesktop from "@/assets/hero_bg_laptop.jpg";
-// import heroBg2x from "@/assets/hero_bg@2x.jpg";
 
 export const RootLayoutContainer = styled.div`
   display: flex;
