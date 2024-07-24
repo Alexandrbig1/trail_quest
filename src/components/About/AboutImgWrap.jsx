@@ -16,6 +16,21 @@ function AboutImgWrap() {
       <ImgFigureFirst>
         <picture>
           <source
+            srcSet="images/about1_mobile.webp 640w"
+            media="(max-width: 640px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about1_desktop.webp 1920w"
+            media="(min-width: 641px) and (max-width: 1919px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about1_desktop@2x.webp 2400w"
+            media="(min-width: 1920px)"
+            type="image/webp"
+          />
+          <source
             srcSet="images/about1_mobile.jpg 640w"
             media="(max-width: 640px)"
             type="image/jpg"
@@ -46,6 +61,21 @@ function AboutImgWrap() {
       <ImgFigureSecond>
         <picture>
           <source
+            srcSet="images/about2_mobile.webp 640w"
+            media="(max-width: 640px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about2_desktop.webp 1920w"
+            media="(min-width: 641px) and (max-width: 1919px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about2_desktop@2x.webp 2400w"
+            media="(min-width: 1920px)"
+            type="image/webp"
+          />
+          <source
             srcSet="images/about2_mobile.jpg 640w"
             media="(max-width: 640px)"
             type="image/jpg"
@@ -72,6 +102,21 @@ function AboutImgWrap() {
       </ImgFigureSecond>
       <ImgFigureThird>
         <picture>
+          <source
+            srcSet="images/about3_mobile.webp 640w"
+            media="(max-width: 640px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about3_desktop.webp 1920w"
+            media="(min-width: 641px) and (max-width: 1919px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="images/about3_desktop@2x.webp 2400w"
+            media="(min-width: 1920px)"
+            type="image/webp"
+          />
           <source
             srcSet="images/about3_mobile.jpg 640w"
             media="(max-width: 640px)"
