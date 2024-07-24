@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { primaryFont } from "../fonts";
 import heroImg from "@/assets/hero.jpg";
 import heroImgDesktop from "@/assets/hero@2x.jpg";
-import { primaryFont } from "../fonts";
+import heroImgWebp from "@/assets/hero.webp";
+import heroImgDesktopWebp from "@/assets/hero@2x.webp";
 
 export const HeroWrapper = styled.section`
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   text-align: center;
+
   background-image: linear-gradient(
       to left bottom,
       ${(p) => p.theme.colors.heroOverlayColor},
@@ -25,6 +28,15 @@ export const HeroWrapper = styled.section`
   justify-content: center;
   gap: 2.4rem;
 
+  @supports (background-image: url(${heroImgWebp})) {
+    background-image: linear-gradient(
+        to left bottom,
+        ${(p) => p.theme.colors.heroOverlayColor},
+        ${(p) => p.theme.colors.heroSecondOverlayColor}
+      ),
+      url(${heroImgWebp});
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
@@ -34,6 +46,19 @@ export const HeroWrapper = styled.section`
         ${(p) => p.theme.colors.heroSecondOverlayColor}
       ),
       url(${heroImgDesktop});
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @supports (background-image: url(${heroImgDesktopWebp})) {
+      background-image: linear-gradient(
+          to left bottom,
+          ${(p) => p.theme.colors.heroOverlayColor},
+          ${(p) => p.theme.colors.heroSecondOverlayColor}
+        ),
+        url(${heroImgDesktopWebp});
+    }
   }
 
   @media (min-width: 1440px) {
