@@ -7,6 +7,7 @@ import { IoPerson } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { capitalizeName } from "../../../helpers/capitalizeWord";
 import { fetchEmailDB } from "../../../services/emailPost";
+import React from "react";
 import {
   FormBtn,
   FormCustomRadio,
@@ -27,7 +28,7 @@ const schema = z.object({
   groupSize: z.enum(["small", "large"], "Please select a group size."),
 });
 
-function Form() {
+const Form = React.memo(() => {
   const {
     register,
     handleSubmit,
@@ -132,6 +133,8 @@ function Form() {
       </FormBtn>
     </FormWrapper>
   );
-}
+});
+
+Form.displayName = "Form";
 
 export default Form;

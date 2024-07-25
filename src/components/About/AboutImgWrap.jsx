@@ -1,3 +1,4 @@
+import React from "react";
 import {
   AboutImage,
   AboutImageWrapper,
@@ -10,7 +11,7 @@ import {
   ImgFigureThird,
 } from "./About.styled";
 
-function AboutImgWrap() {
+const AboutImgWrap = React.memo(() => {
   return (
     <AboutImageWrapper>
       <ImgFigureFirst>
@@ -142,6 +143,8 @@ function AboutImgWrap() {
       </ImgFigureThird>
     </AboutImageWrapper>
   );
-}
+});
+
+AboutImgWrap.displayName = "AboutImgWrap";
 
 export default AboutImgWrap;

@@ -1,7 +1,8 @@
 import { SponsorImg, SponsorWrapper } from "./Sponsor.styled";
 import sponsorData from "../../data/sponsorsData.json";
+import React from "react";
 
-function Sponsor() {
+const Sponsor = React.memo(() => {
   return (
     <SponsorWrapper>
       {sponsorData.map(({ id, src, alt }) => (
@@ -9,6 +10,8 @@ function Sponsor() {
       ))}
     </SponsorWrapper>
   );
-}
+});
+
+Sponsor.displayName = "Sponsor";
 
 export default Sponsor;

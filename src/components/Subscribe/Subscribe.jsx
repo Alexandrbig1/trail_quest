@@ -2,7 +2,7 @@ import { fetchEmailDB } from "../../services/emailPost";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
 import emailRegex from "../../regex/emailRegex";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import {
   RoadImg,
   SubscribeButton,
@@ -15,7 +15,7 @@ import {
   SubscribeWrapper,
 } from "./Subscribe.styled";
 
-function Subscribe() {
+const Subscribe = React.memo(() => {
   const form = useRef();
 
   const handleSubmitEmail = async (e) => {
@@ -83,6 +83,8 @@ function Subscribe() {
       </SubscribeWrapper>
     </SubscribeContainer>
   );
-}
+});
+
+Subscribe.displayName = "Subscribe";
 
 export default Subscribe;

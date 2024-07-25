@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "../../context/activeSection";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import HeadingSection from "../UI/Heading/Heading";
 import toursData from "../../data/toursData.json";
 import {
@@ -34,7 +34,7 @@ const BACK_COMPONENTS = {
   winterImg: ToursItemBackThird,
 };
 
-function Tours() {
+const Tours = React.memo(() => {
   const { setActiveSection } = useActiveSection();
 
   const { ref: toursRef, inView: toursInView } = useInView({
@@ -122,6 +122,8 @@ function Tours() {
       </ToursMenu>
     </ToursContainer>
   );
-}
+});
+
+Tours.displayName = "Tours";
 
 export default Tours;

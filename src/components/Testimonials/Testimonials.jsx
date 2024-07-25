@@ -27,12 +27,12 @@ import {
   TestimonialsContainer,
   TestimonialsSwiperContainer,
 } from "./Testimonials.styled";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 
 const AUTOPLAY_DELAY = 5000;
 const SWIPER_SPEED = 600;
 
-function Testimonials() {
+const Testimonials = React.memo(() => {
   const swiperSettings = useMemo(
     () => ({
       slidesPerView: 1,
@@ -90,7 +90,9 @@ function Testimonials() {
       </TestimonialsSwiperContainer>
     </TestimonialsContainer>
   );
-}
+});
+
+Testimonials.displayName = "Testimonials";
 
 Testimonials.propTypes = {
   reviews: PropTypes.arrayOf(

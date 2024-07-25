@@ -3,11 +3,15 @@ import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import { Container } from "../../components/layout";
 import Features from "../../components/Features/Features";
-import Contact from "../../components/Contact/Contact";
 import Tours from "../../components/Tours/Tours";
-import Testimonials from "../../components/Testimonials/Testimonials";
-import Sponsor from "../../components/Sponsor/Sponsor";
-import Subscribe from "../../components/Subscribe/Subscribe";
+import { lazy, Suspense } from "react";
+
+const Testimonials = lazy(() =>
+  import("../../components/Testimonials/Testimonials")
+);
+const Contact = lazy(() => import("../../components/Contact/Contact"));
+const Sponsor = lazy(() => import("../../components/Sponsor/Sponsor"));
+const Subscribe = lazy(() => import("../../components/Subscribe/Subscribe"));
 
 function Home() {
   return (
@@ -45,10 +49,18 @@ function Home() {
       <Container>
         <Tours />
       </Container>
-      <Testimonials />
-      <Contact />
-      <Sponsor />
-      <Subscribe />
+      <Suspense fallback={null}>
+        <Testimonials />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Contact />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Sponsor />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Subscribe />
+      </Suspense>
     </>
   );
 }
