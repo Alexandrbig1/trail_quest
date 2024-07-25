@@ -1,11 +1,17 @@
 import styled from "styled-components";
-import oceanImg from "@/assets/tours_ocean.jpg";
-import oceanImgDesktop from "@/assets/tours_ocean@2x.jpg";
-import mountainImg from "@/assets/tours_mountain.jpg";
-import mountainImgDesktop from "@/assets/tours_mountain@2x.jpg";
-import snowImg from "@/assets/tours_snow.jpg";
-import snowImgDesktop from "@/assets/tours_snow@2x.jpg";
 import { primaryFont, secondaryFont } from "../fonts";
+import oceanImg from "@/assets/tours_ocean.jpg";
+import oceanImgWebp from "@/assets/tours_ocean.webp";
+import oceanImgDesktop from "@/assets/tours_ocean@2x.jpg";
+import oceanImgDesktopWebp from "@/assets/tours_ocean@2x.webp";
+import mountainImg from "@/assets/tours_mountain.jpg";
+import mountainImgWebp from "@/assets/tours_mountain.webp";
+import mountainImgDesktop from "@/assets/tours_mountain@2x.jpg";
+import mountainImgDesktopWebp from "@/assets/tours_mountain@2x.webp";
+import snowImg from "@/assets/tours_snow.jpg";
+import snowImgWebp from "@/assets/tours_snow.webp";
+import snowImgDesktop from "@/assets/tours_snow@2x.jpg";
+import snowImgDesktopWebp from "@/assets/tours_snow@2x.webp";
 
 export const ToursContainer = styled.section`
   width: 100%;
@@ -128,6 +134,15 @@ export const ToursItemImgFirst = styled(ToursItemImg)`
     ),
     url(${oceanImg});
 
+  @supports (background-image: url(${oceanImgWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.blueColorLowOp},
+        ${(p) => p.theme.colors.blueColorDarkLowOp}
+      ),
+      url(${oceanImgWebp});
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
@@ -138,7 +153,17 @@ export const ToursItemImgFirst = styled(ToursItemImg)`
       ),
       url(${oceanImgDesktop});
   }
+
+  @supports (background-image: url(${oceanImgDesktopWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.blueColorLowOp},
+        ${(p) => p.theme.colors.blueColorDarkLowOp}
+      ),
+      url(${oceanImgDesktopWebp});
+  }
 `;
+
 export const ToursItemImgSecond = styled(ToursItemImg)`
   background-image: linear-gradient(
       to right bottom,
@@ -146,6 +171,15 @@ export const ToursItemImgSecond = styled(ToursItemImg)`
       ${(p) => p.theme.colors.orangeColorDarkLowOp}
     ),
     url(${mountainImg});
+
+  @supports (background-image: url(${mountainImgWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.orangeColorLowOp},
+        ${(p) => p.theme.colors.orangeColorDarkLowOp}
+      ),
+      url(${mountainImgWebp});
+  }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
@@ -157,6 +191,15 @@ export const ToursItemImgSecond = styled(ToursItemImg)`
       ),
       url(${mountainImgDesktop});
   }
+
+  @supports (background-image: url(${mountainImgDesktopWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.orangeColorLowOp},
+        ${(p) => p.theme.colors.orangeColorDarkLowOp}
+      ),
+      url(${mountainImgDesktopWebp});
+  }
 `;
 
 export const ToursItemImgThird = styled(ToursItemImg)`
@@ -167,6 +210,15 @@ export const ToursItemImgThird = styled(ToursItemImg)`
     ),
     url(${snowImg});
 
+  @supports (background-image: url(${snowImgWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.greenColorDarkLowOp},
+        ${(p) => p.theme.colors.greenColorDarkLowOp}
+      ),
+      url(${snowImgWebp});
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
@@ -176,6 +228,15 @@ export const ToursItemImgThird = styled(ToursItemImg)`
         ${(p) => p.theme.colors.greenColorDarkLowOp}
       ),
       url(${snowImgDesktop});
+  }
+
+  @supports (background-image: url(${snowImgDesktopWebp})) {
+    background-image: linear-gradient(
+        to right bottom,
+        ${(p) => p.theme.colors.greenColorDarkLowOp},
+        ${(p) => p.theme.colors.greenColorDarkLowOp}
+      ),
+      url(${snowImgDesktopWebp});
   }
 `;
 

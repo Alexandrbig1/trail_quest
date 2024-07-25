@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { primaryFont, secondaryFont } from "../fonts";
 import roadImg from "@/assets/road.jpg";
+import roadImgWebp from "@/assets/road.webp";
 
 export const SubscribeContainer = styled.section`
   margin: 4.8rem auto;
@@ -167,6 +168,10 @@ export const RoadImg = styled.div`
   background-position: bottom 15rem center;
   background-repeat: no-repeat;
 
+  @supports (background-image: url(${roadImgWebp})) {
+    background-image: url(${roadImgWebp});
+  }
+
   @media (min-width: 480px) {
     bottom: -60%;
     background-position: bottom 12rem center;
@@ -176,6 +181,5 @@ export const RoadImg = styled.div`
     top: 0;
     left: 33%;
     background-position: bottom 20% center;
-    background-size: cover;
   }
 `;

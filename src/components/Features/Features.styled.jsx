@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import featuresImg from "@/assets/features.jpg";
 import featuresImgDesktop from "@/assets/features@2x.jpg";
+import featuresImgWebp from "@/assets/features.webp";
+import featuresImgDesktopWebp from "@/assets/features@2x.webp";
 
 export const FeaturesContainer = styled.section`
   width: 100%;
@@ -20,6 +22,15 @@ export const FeaturesContainer = styled.section`
   -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 
+  @supports (background-image: url(${featuresImgWebp})) {
+    background-image: linear-gradient(
+        to left bottom,
+        ${(p) => p.theme.colors.heroOverlayColor},
+        ${(p) => p.theme.colors.heroSecondOverlayColor}
+      ),
+      url(${featuresImgWebp});
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
@@ -29,6 +40,19 @@ export const FeaturesContainer = styled.section`
         ${(p) => p.theme.colors.heroSecondOverlayColor}
       ),
       url(${featuresImgDesktop});
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @supports (background-image: url(${featuresImgDesktopWebp})) {
+      background-image: linear-gradient(
+          to left bottom,
+          ${(p) => p.theme.colors.heroOverlayColor},
+          ${(p) => p.theme.colors.heroSecondOverlayColor}
+        ),
+        url(${featuresImgDesktopWebp});
+    }
   }
 `;
 

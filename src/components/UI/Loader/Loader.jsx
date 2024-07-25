@@ -5,7 +5,7 @@ export default function Loader() {
   return (
     <LoaderDivWrapper>
       <RotatingLines
-        strokeColor="#3b82f6"
+        strokeColor="#a2d2ff"
         strokeWidth="5"
         animationDuration="0.75"
         width="96"
