@@ -9,6 +9,7 @@ import { useActiveSection } from "../../context/activeSection";
 import { useNavigate } from "react-router-dom";
 import MenuLists from "../../data/menuLists";
 import MemoizedThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
+import MobileHeader from "./MobileHeader";
 
 function Header() {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ function Header() {
               </li>
             ))}
           </HeaderNavMenu>
+          <MobileHeader />
         </nav>
         <MemoizedThemeSwitcher />
       </HeaderNavWrapper>
