@@ -1,16 +1,14 @@
 import Logo from "../UI/Logo/Logo";
-import { HeaderNavLink, HeaderNavMenu, HeaderWrapper } from "./Header.styled";
+import {
+  HeaderNavLink,
+  HeaderNavMenu,
+  HeaderNavWrapper,
+  HeaderWrapper,
+} from "./Header.styled";
 import { useActiveSection } from "../../context/activeSection";
 import { useNavigate } from "react-router-dom";
-
-const menuLists = [
-  { to: "/home", list: "Home" },
-  { to: "/about", list: "About" },
-  { to: "/features", list: "Features" },
-  { to: "/tours", list: "Tours" },
-  { to: "/reviews", list: "Reviews" },
-  { to: "/contact", list: "Contact" },
-];
+import MenuLists from "../../data/menuLists";
+import MemoizedThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
 
 function Header() {
   const navigate = useNavigate();
@@ -33,21 +31,24 @@ function Header() {
   return (
     <HeaderWrapper>
       <Logo />
-      <nav>
-        <HeaderNavMenu>
-          {menuLists.map(({ to, list }) => (
-            <li key={to}>
-              <HeaderNavLink
-                href={to}
-                onClick={(e) => handleLinkClick(e, to, list)}
-                $active={activeSection === list}
-              >
-                {list}
-              </HeaderNavLink>
-            </li>
-          ))}
-        </HeaderNavMenu>
-      </nav>
+      <HeaderNavWrapper>
+        <nav>
+          <HeaderNavMenu>
+            {MenuLists.map(({ to, list }) => (
+              <li key={to}>
+                <HeaderNavLink
+                  href={to}
+                  onClick={(e) => handleLinkClick(e, to, list)}
+                  $active={activeSection === list}
+                >
+                  {list}
+                </HeaderNavLink>
+              </li>
+            ))}
+          </HeaderNavMenu>
+        </nav>
+        <MemoizedThemeSwitcher />
+      </HeaderNavWrapper>
     </HeaderWrapper>
   );
 }

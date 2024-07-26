@@ -17,9 +17,13 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderNavMenu = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
 `;
 
 export const HeaderNavLink = styled.a`
@@ -38,4 +42,10 @@ export const HeaderNavLink = styled.a`
   &:hover {
     color: ${(p) => p.theme.colors.mainTextColor};
   }
+`;
+
+export const HeaderNavWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 `;
