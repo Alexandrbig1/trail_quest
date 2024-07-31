@@ -27,6 +27,8 @@ import {
   ToursItemCardBtn,
   TourItemCardDescription,
 } from "./Tours.styled";
+import { useMenu } from "../../context/ToggleMenuContext";
+import ToursModal from "../UI/ToursModal/ToursModal";
 
 const BACK_COMPONENTS = {
   coastalImg: ToursItemBack,
@@ -35,6 +37,7 @@ const BACK_COMPONENTS = {
 };
 
 const Tours = React.memo(() => {
+  const { toggleToursModal } = useMenu();
   const { setActiveSection } = useActiveSection();
 
   const { ref: toursRef, inView: toursInView } = useInView({
@@ -109,9 +112,11 @@ const Tours = React.memo(() => {
                       <ToursItemCardBtn
                         type="button"
                         aria-label="Book a tour now"
+                        onClick={toggleToursModal}
                       >
                         Book now!
                       </ToursItemCardBtn>
+                      <ToursModal />
                     </ToursItemBackWrapper>
                   </BackComponent>
                 )}

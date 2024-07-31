@@ -5,9 +5,14 @@ const Menu = createContext();
 // eslint-disable-next-line react/prop-types
 export const MenuContext = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+  };
+
+  const toggleToursModal = () => {
+    setModalIsOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
   return (
@@ -15,6 +20,8 @@ export const MenuContext = ({ children }) => {
       value={{
         toggleMenu,
         menuOpen,
+        toggleToursModal,
+        modalIsOpen,
       }}
     >
       {children}
