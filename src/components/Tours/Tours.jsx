@@ -1,8 +1,10 @@
 import { useInView } from "react-intersection-observer";
-import { useActiveSection } from "../../context/activeSection";
-import React, { useEffect } from "react";
+import { useActiveSection } from "@/context/activeSection";
+import React, { useEffect, useState } from "react";
 import HeadingSection from "../UI/Heading/Heading";
-import toursData from "../../data/toursData.json";
+import toursData from "@/data/toursData.json";
+import { useMenu } from "../../context/ToggleMenuContext";
+import ToursModal from "../UI/ToursModal/ToursModal";
 import {
   ToursItemBack,
   ToursContainer,
@@ -27,8 +29,6 @@ import {
   ToursItemCardBtn,
   TourItemCardDescription,
 } from "./Tours.styled";
-import { useMenu } from "../../context/ToggleMenuContext";
-import ToursModal from "../UI/ToursModal/ToursModal";
 
 const BACK_COMPONENTS = {
   coastalImg: ToursItemBack,
@@ -39,6 +39,7 @@ const BACK_COMPONENTS = {
 const Tours = React.memo(() => {
   const { toggleToursModal } = useMenu();
   const { setActiveSection } = useActiveSection();
+  const [selectedTour, setSelectedTour] = useState(null);
 
   const { ref: toursRef, inView: toursInView } = useInView({
     threshold: 0.5,
@@ -50,6 +51,12 @@ const Tours = React.memo(() => {
     }
   }, [toursInView, setActiveSection]);
 
+  const handleBookNowClick = (tour) => {
+    setSelectedTour(tour);
+    console.log(tour);
+    toggleToursModal();
+  };
+
   return (
     <ToursContainer id="tours" ref={toursRef}>
       <HeadingSection>Most popular tours</HeadingSection>
@@ -57,6 +64,7 @@ const Tours = React.memo(() => {
         {toursData.map(
           ({
             id,
+            modalId,
             title,
             menuItems,
             price,
@@ -64,6 +72,18 @@ const Tours = React.memo(() => {
             coastalImg,
             craterLakeImg,
             winterImg,
+            coastalImgPath,
+            coastalImgWebpPath,
+            coastalImgDesktopPath,
+            coastalImgDesktopWebpPath,
+            craterLakeImgPath,
+            craterLakeImgWebpPath,
+            craterLakeImgDesktopPath,
+            craterLakeImgDesktopWebpPath,
+            winterImgPath,
+            winterImgWebpPath,
+            winterImgDesktopPath,
+            winterImgDesktopWebpPath,
           }) => {
             const BackComponent = coastalImg
               ? BACK_COMPONENTS.coastalImg
@@ -112,11 +132,31 @@ const Tours = React.memo(() => {
                       <ToursItemCardBtn
                         type="button"
                         aria-label="Book a tour now"
-                        onClick={toggleToursModal}
+                        onClick={() =>
+                          handleBookNowClick({
+                            id,
+                            img:
+                              coastalImgPath ||
+                              craterLakeImgPath ||
+                              winterImgPath,
+                            imgWebp:
+                              coastalImgWebpPath ||
+                              craterLakeImgWebpPath ||
+                              winterImgWebpPath,
+                            imgDesktop:
+                              coastalImgDesktopPath ||
+                              craterLakeImgDesktopPath ||
+                              winterImgDesktopPath,
+                            imgDesktopWebp:
+                              coastalImgDesktopWebpPath ||
+                              craterLakeImgDesktopWebpPath ||
+                              winterImgDesktopWebpPath,
+                          })
+                        }
                       >
                         Book now!
                       </ToursItemCardBtn>
-                      <ToursModal />
+                      <ToursModal modalId={id} selectedTour={selectedTour} />
                     </ToursItemBackWrapper>
                   </BackComponent>
                 )}

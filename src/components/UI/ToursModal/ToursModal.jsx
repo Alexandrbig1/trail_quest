@@ -1,11 +1,13 @@
 import React from "react";
 import { useMenu } from "@/context/ToggleMenuContext";
+import toursData from "@/data/toursData.json";
 import {
   CloseIcon,
   CloseModal,
   ModalDiv,
   ModalWindow,
 } from "./ToursModal.styled";
+import { ToursHeading } from "../../Tours/Tours.styled";
 
 const customStyles = {
   overlay: {
@@ -19,8 +21,14 @@ const customStyles = {
   },
 };
 
-const ToursModal = React.memo(() => {
+const ToursModal = React.memo((modalId, selectedTour) => {
   const { modalIsOpen, toggleToursModal } = useMenu();
+
+  if (!selectedTour) return null;
+
+  const { img, imgWebp, imgDesktop, imgDesktopWebp } = selectedTour;
+
+  // console.log(selectedTour);
 
   return (
     <ModalDiv
@@ -36,7 +44,23 @@ const ToursModal = React.memo(() => {
       >
         <CloseIcon />
       </CloseModal>
-      <ModalWindow>modal open</ModalWindow>
+      <ModalWindow>
+        <picture>
+          <source srcSet={img} type="image/jpg" />
+          <source
+            srcSet={imgDesktop}
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
+          <source srcSet={imgWebp} type="image/webp" />
+          <source
+            srcSet={imgDesktopWebp}
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
+          <img src={img} alt={`Image for tour ${modalId}`} />
+        </picture>
+      </ModalWindow>
     </ModalDiv>
   );
 });
