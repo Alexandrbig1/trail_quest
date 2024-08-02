@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import { useMenu } from "@/context/ToggleMenuContext";
 import toursData from "@/data/toursData.json";
+import ModalImgComponent from "./ModalImgComponent";
 import {
   CloseIcon,
   CloseModal,
   ModalDiv,
   ModalWindow,
 } from "./ToursModal.styled";
-import { ToursHeading } from "../../Tours/Tours.styled";
 
 const customStyles = {
   overlay: {
@@ -21,14 +22,12 @@ const customStyles = {
   },
 };
 
-const ToursModal = React.memo((modalId, selectedTour) => {
+const ToursModal = React.memo(({ selectedTour }) => {
   const { modalIsOpen, toggleToursModal } = useMenu();
 
-  if (!selectedTour) return null;
-
-  const { img, imgWebp, imgDesktop, imgDesktopWebp } = selectedTour;
-
-  // console.log(selectedTour);
+  const filteredTour = useMemo(() => {
+    return toursData.find((item) => item.modalId === selectedTour);
+  }, [selectedTour]);
 
   return (
     <ModalDiv
@@ -44,26 +43,21 @@ const ToursModal = React.memo((modalId, selectedTour) => {
       >
         <CloseIcon />
       </CloseModal>
-      <ModalWindow>
-        <picture>
-          <source srcSet={img} type="image/jpg" />
-          <source
-            srcSet={imgDesktop}
-            media="(min-width: 1024px)"
-            type="image/webp"
+      {filteredTour && (
+        <ModalWindow>
+          <ModalImgComponent
+            img={filteredTour.img}
+            altText={`Image for tour ${filteredTour.modalId}`}
           />
-          <source srcSet={imgWebp} type="image/webp" />
-          <source
-            srcSet={imgDesktopWebp}
-            media="(min-width: 1024px)"
-            type="image/webp"
-          />
-          <img src={img} alt={`Image for tour ${modalId}`} />
-        </picture>
-      </ModalWindow>
+        </ModalWindow>
+      )}
     </ModalDiv>
   );
 });
+
+ToursModal.propTypes = {
+  selectedTour: PropTypes.string.isRequired,
+};
 
 ToursModal.displayName = "ToursModal";
 

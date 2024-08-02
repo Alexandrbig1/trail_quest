@@ -39,7 +39,7 @@ const BACK_COMPONENTS = {
 const Tours = React.memo(() => {
   const { toggleToursModal } = useMenu();
   const { setActiveSection } = useActiveSection();
-  const [selectedTour, setSelectedTour] = useState(null);
+  const [selectedTour, setSelectedTour] = useState("");
 
   const { ref: toursRef, inView: toursInView } = useInView({
     threshold: 0.5,
@@ -53,7 +53,6 @@ const Tours = React.memo(() => {
 
   const handleBookNowClick = (tour) => {
     setSelectedTour(tour);
-    console.log(tour);
     toggleToursModal();
   };
 
@@ -72,18 +71,6 @@ const Tours = React.memo(() => {
             coastalImg,
             craterLakeImg,
             winterImg,
-            coastalImgPath,
-            coastalImgWebpPath,
-            coastalImgDesktopPath,
-            coastalImgDesktopWebpPath,
-            craterLakeImgPath,
-            craterLakeImgWebpPath,
-            craterLakeImgDesktopPath,
-            craterLakeImgDesktopWebpPath,
-            winterImgPath,
-            winterImgWebpPath,
-            winterImgDesktopPath,
-            winterImgDesktopWebpPath,
           }) => {
             const BackComponent = coastalImg
               ? BACK_COMPONENTS.coastalImg
@@ -132,31 +119,10 @@ const Tours = React.memo(() => {
                       <ToursItemCardBtn
                         type="button"
                         aria-label="Book a tour now"
-                        onClick={() =>
-                          handleBookNowClick({
-                            id,
-                            img:
-                              coastalImgPath ||
-                              craterLakeImgPath ||
-                              winterImgPath,
-                            imgWebp:
-                              coastalImgWebpPath ||
-                              craterLakeImgWebpPath ||
-                              winterImgWebpPath,
-                            imgDesktop:
-                              coastalImgDesktopPath ||
-                              craterLakeImgDesktopPath ||
-                              winterImgDesktopPath,
-                            imgDesktopWebp:
-                              coastalImgDesktopWebpPath ||
-                              craterLakeImgDesktopWebpPath ||
-                              winterImgDesktopWebpPath,
-                          })
-                        }
+                        onClick={() => handleBookNowClick(modalId)}
                       >
                         Book now!
                       </ToursItemCardBtn>
-                      <ToursModal modalId={id} selectedTour={selectedTour} />
                     </ToursItemBackWrapper>
                   </BackComponent>
                 )}
@@ -165,6 +131,7 @@ const Tours = React.memo(() => {
           }
         )}
       </ToursMenu>
+      <ToursModal selectedTour={selectedTour} />
     </ToursContainer>
   );
 });

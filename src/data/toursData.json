@@ -4,10 +4,12 @@
     "modalId": "modalId001",
     "title": "Coastal Explorer Tour",
     "coastalImg": true,
-    "coastalImgPath": "/assets/tours_ocean.jpg",
-    "coastalImgWebpPath": "/assets/tours_ocean.webp",
-    "coastalImgDesktopPath": "/assets/tours_ocean@2x.jpg",
-    "coastalImgDesktopWebpPath": "/assets/tours_ocean@2x.webp",
+    "img": [
+      { "src": "/images/tours_ocean.jpg" },
+      { "srcDesktop": "/images/tours_ocean@2x.jpg" },
+      { "srcWebp": "/images/tours_ocean.webp" },
+      { "srcDesktopWebp": "/images/tours_ocean@2x.webp" }
+    ],
     "menuItems": [
       "Coastal sightseeing",
       "Marine wildlife observation",
@@ -23,10 +25,12 @@
     "modalId": "modalId002",
     "title": "Crater Lake Exploration",
     "craterLakeImg": true,
-    "craterLakeImgPath": "/assets/tours_mountain.jpg",
-    "craterLakeImgWebpPath": "/assets/tours_mountain.webp",
-    "craterLakeImgDesktopPath": "/assets/tours_mountain@2x.jpg",
-    "craterLakeImgDesktopWebpPath": "/assets/tours_mountain@2x.webp",
+    "img": [
+      { "src": "/images/tours_mountain.jpg" },
+      { "srcDesktop": "/images/tours_mountain@2x.jpg" },
+      { "srcWebp": "/images/tours_mountain.webp" },
+      { "srcDesktopWebp": "/images/tours_mountain@2x.webp" }
+    ],
     "menuItems": [
       "Scenic hiking trails",
       "Wildlife encounters",
@@ -42,10 +46,12 @@
     "modalId": "modalId003",
     "title": "Winter Wonderland Excursion",
     "winterImg": true,
-    "winterImgPath": "/assets/tours_snow.jpg",
-    "winterImgWebpPath": "/assets/tours_snow.webp",
-    "winterImgDesktopPath": "/assets/tours_snow@2x.jpg",
-    "winterImgDesktopWebpPath": "/assets/tours_snow@2x.webp",
+    "img": [
+      { "src": "/images/tours_snow.jpg" },
+      { "srcDesktop": "/images/tours_snow@2x.jpg" },
+      { "srcWebp": "/images/tours_snow.webp" },
+      { "srcDesktopWebp": "/images/tours_snow@2x.webp" }
+    ],
     "menuItems": [
       "Skiing and snowboarding",
       "Snowshoeing",
