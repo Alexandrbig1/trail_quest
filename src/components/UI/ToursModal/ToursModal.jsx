@@ -45,6 +45,9 @@ const ToursModal = React.memo(({ selectedTour }) => {
       </CloseModal>
       {filteredTour && (
         <ModalWindow>
+          <h2>{filteredTour.title}</h2>
+          <span>{filteredTour.price}</span>
+          <p>{filteredTour.description}</p>
           <ModalImgComponent
             img={filteredTour.img}
             altText={`Image for tour ${filteredTour.modalId}`}
