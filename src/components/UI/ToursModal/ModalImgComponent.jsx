@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { ToursModalImg } from "./ToursModal.styled";
 
 const ModalImgComponent = React.memo(({ img = [], altText = "" }) => (
   <picture>
@@ -19,7 +20,7 @@ const ModalImgComponent = React.memo(({ img = [], altText = "" }) => (
         type="image/jpg"
       />
     )}
-    <img src={img[0]?.src} alt={altText} />
+    <ToursModalImg src={img[0]?.src} alt={altText} />
   </picture>
 ));
 

@@ -6,7 +6,12 @@ import ModalImgComponent from "./ModalImgComponent";
 import {
   CloseIcon,
   CloseModal,
+  ModalButton,
   ModalDiv,
+  ModalPrice,
+  ModalText,
+  ModalTextWrapper,
+  ModalTitle,
   ModalWindow,
 } from "./ToursModal.styled";
 
@@ -45,13 +50,18 @@ const ToursModal = React.memo(({ selectedTour }) => {
       </CloseModal>
       {filteredTour && (
         <ModalWindow>
-          <h2>{filteredTour.title}</h2>
-          <span>{filteredTour.price}</span>
-          <p>{filteredTour.description}</p>
           <ModalImgComponent
             img={filteredTour.img}
             altText={`Image for tour ${filteredTour.modalId}`}
           />
+          <ModalTextWrapper>
+            <ModalTitle>{filteredTour.title}</ModalTitle>
+            <ModalText>{filteredTour.description}</ModalText>
+            <ModalPrice>{filteredTour.price}</ModalPrice>
+            <ModalButton type="button" aria-label="Book a tour now">
+              Book now!
+            </ModalButton>
+          </ModalTextWrapper>
         </ModalWindow>
       )}
     </ModalDiv>
