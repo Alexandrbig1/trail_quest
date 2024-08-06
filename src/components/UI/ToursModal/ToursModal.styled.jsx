@@ -22,31 +22,30 @@ export const ModalDiv = styled(Modal)`
   border-radius: 1.2rem;
 `;
 
-export const CloseIcon = styled(IoMdClose)`
-  top: 1.6rem;
-  right: 1.6rem;
-  position: absolute;
-  font-size: 2.4rem;
-  color: ${(p) => p.theme.colors.mainTextColor};
-  cursor: pointer;
-  transition: transform var(--primary-transition),
-    scale var(--primary-transition);
-`;
-
 export const CloseModal = styled.button`
   border: none;
   outline: none;
   background: none;
   width: 2.4rem;
   height: 2.4rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  top: 1.6rem;
+  right: 1.6rem;
+  position: absolute;
+  cursor: pointer;
+  z-index: 300;
+  transition: transform var(--primary-transition),
+    scale var(--primary-transition);
 
   &:hover,
   &:focus {
-    ${CloseIcon} {
-      transform: rotate(90deg) scale(1.2);
-      color: ${(p) => p.theme.colors.accentDarkColor};
-    }
+    transform: rotate(90deg) scale(1.2);
+    color: ${(p) => p.theme.colors.accentDarkColor};
   }
+`;
+
+export const CloseIcon = styled(IoMdClose)`
+  font-size: 2.4rem;
 `;
 
 export const ModalWindow = styled.div`
