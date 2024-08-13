@@ -32,7 +32,13 @@ Discover the breathtaking beauty of Oregon with Trail Quest. Join us for guided 
 
 - [Technologies Used](#technologies-used)
 - [Features](#features)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Issues](#issues)
 - [License](#license)
+- [Feedback](#feedback)
+- [Languages and Tools](#languages-and-tools)
+- [Connect with me](#connect-with-me)
 
 ---
 
