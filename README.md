@@ -105,21 +105,19 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 ## Issues
 
-If you encounter any issues or have suggestions, please
-[open an issue](https://github.com/Alexandrbig1/trail_quest/issues).
+If you encounter any issues or bugs, please feel free to [open an issue](https://github.com/Alexandrbig1/trail_quest/issues) on this repository. Provide a detailed description of the problem and steps to reproduce it, if possible.
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [MIT License](LICENSE) file for details.
 
 ---
 
 ## Feedback
 
-I welcome feedback and suggestions from users to improve the application's
-functionality and user experience.
+We welcome feedback and suggestions to improve **Trail Quest**. If you have any ideas or constructive comments, feel free to reach out by creating an issue or contacting us directly.
 
 ---
 
