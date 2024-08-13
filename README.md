@@ -6,7 +6,7 @@ Discover the breathtaking beauty of Oregon with Trail Quest. Join us for guided 
 
 ## About the Project
 
-This project was born from a deep love for Oregon's natural beauty. After a recent trip to Oregon, I was so inspired by the state's stunning landscapes—seaside cliffs, the mighty Pacific Ocean, dense forests, serene lakes, and majestic waterfalls—that I decided to create a website dedicated to exploring these incredible places.
+> This project was born from a deep love for Oregon's natural beauty. After a recent trip to Oregon, I was so inspired by the state's stunning landscapes—seaside cliffs, the mighty Pacific Ocean, dense forests, serene lakes, and majestic waterfalls—that I decided to create a website dedicated to exploring these incredible places.
 
 **Trail Quest** aims to connect nature enthusiasts with the best hiking experiences Oregon has to offer. Whether you're a seasoned hiker or just starting, you'll find trails that suit your level of adventure.
 
