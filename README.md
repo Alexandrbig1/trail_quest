@@ -1,6 +1,6 @@
-# Oregon's Hiking Adventures
+# Trail Quest
 
-Welcome to **Oregon's Hiking Adventures**! 🌲🏞️
+Welcome to **Trail Quest**! 🌲🏞️
 
 Discover the breathtaking beauty of Oregon with Trail Quest. Join us for guided hikes through scenic trails, from lush forests to rugged mountains. Your adventure awaits!
 
@@ -8,7 +8,7 @@ Discover the breathtaking beauty of Oregon with Trail Quest. Join us for guided 
 
 This project was born from a deep love for Oregon's natural beauty. After a recent trip to Oregon, I was so inspired by the state's stunning landscapes—seaside cliffs, the mighty Pacific Ocean, dense forests, serene lakes, and majestic waterfalls—that I decided to create a website dedicated to exploring these incredible places.
 
-**Oregon's Hiking Adventures** aims to connect nature enthusiasts with the best hiking experiences Oregon has to offer. Whether you're a seasoned hiker or just starting, you'll find trails that suit your level of adventure.
+**Trail Quest** aims to connect nature enthusiasts with the best hiking experiences Oregon has to offer. Whether you're a seasoned hiker or just starting, you'll find trails that suit your level of adventure.
 
 ## Features
 
@@ -36,6 +36,17 @@ This project is a Single Page Application (SPA) built using React and Vite. Belo
 To get started locally, clone this repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/yourusername/Oregon-Hiking-Adventures.git
-cd Oregon-Hiking-Adventures
+git clone https://github.com/yourusername/Trail-Quest.git
+cd Trail-Quest
 npm install
+
+## Usage
+After installing the dependencies, you can run the project locally:
+```bash
+npm run dev
+
+Visit http://localhost:3000 in your browser to explore the website.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes. For major changes, please open an issue to discuss what you'd like to improve.
