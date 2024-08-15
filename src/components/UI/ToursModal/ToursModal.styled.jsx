@@ -68,6 +68,9 @@ export const ModalTitle = styled.h3`
   font-family: ${primaryFont};
   line-height: 1.2;
   letter-spacing: -0.02em;
+
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.greyColor};
 `;
 
 export const ModalText = styled.p`
@@ -77,6 +80,9 @@ export const ModalText = styled.p`
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: -0.02em;
+
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.greyColor};
 `;
 
 export const ModalPrice = styled.span`
