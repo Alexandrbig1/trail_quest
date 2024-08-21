@@ -157,7 +157,7 @@ We welcome feedback and suggestions to improve **Trail Quest**. If you have any 
 <a href="https://github.com/alexandrbig1" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
-<a href="https://discord.gg/uzM3UNQU" target="_blank">
+<a href="https://discord.gg/t6MGsCqdFX" target="_blank">
 <img src="https://img.shields.io/badge/discord-%237289DA.svg?&style=for-the-badge&logo=discord&logoColor=white" alt="Discord" style="margin-bottom: 5px;" />
 </a>
 <a href="https://stackoverflow.com/users/22484161/alex-smagin" target="_blank">
