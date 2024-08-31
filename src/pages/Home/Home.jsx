@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Alex Smagin - Portfolio</title>
+        <title>Trail Quest</title>
         <meta
           name="description"
           content="Join Trail Quest for unforgettable hiking adventures across Oregon's stunning landscapes. Discover hidden trails, breathtaking views, and connect with nature like never before."
